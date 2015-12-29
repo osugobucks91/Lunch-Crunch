@@ -39,6 +39,11 @@
                     controller: FoodTruckApp.Controllers.CustomerRegisterController,
                     controllerAs: 'custRegister'
                 })
+                .when('/business/login', {
+                    templateUrl: '/presentation/ngApp/views/businessLogin.html',
+                    controller: FoodTruckApp.Controllers.BusinessLoginController,
+                    controllerAs: 'businessLogin'
+                })
             $httpProvider.interceptors.push('authInterceptor');
         });
 }
