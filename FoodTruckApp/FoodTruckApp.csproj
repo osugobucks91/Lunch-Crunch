@@ -226,6 +226,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Presentation\ngApp\views\businessRegister.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
