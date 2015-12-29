@@ -2,7 +2,7 @@
 
     import Customer = FoodTruckApp.Models.CustomerUser;
 
-    export class RegisterController {
+    export class CustomerRegisterController {
 
         public newCustomer: Customer;
         public validationErrors;
