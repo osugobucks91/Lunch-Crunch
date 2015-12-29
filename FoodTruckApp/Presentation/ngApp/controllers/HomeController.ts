@@ -9,13 +9,13 @@
 
         public goToBussinessLogin() {
 
-            this.$location.path(`/businesslogin`);
+            this.$location.path(`/business/login`);
 
         }
 
         public goToCustomerLogin() {
 
-            this.$location.path(`/customerlogin`);
+            this.$location.path(`/customer/login`);
 
         }
 
