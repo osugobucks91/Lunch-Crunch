@@ -226,13 +226,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-<<<<<<< HEAD
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
-=======
-    <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
->>>>>>> f89b9d19e88a6ccd5a8478160d4c3e0585222358
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
