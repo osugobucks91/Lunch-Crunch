@@ -228,7 +228,9 @@
     <Compile Include="Domain\Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Results\ChallengeResult.cs" />
     <Compile Include="Services\BusinessUserDTO.cs" />
+    <Compile Include="Services\CustomerUserDTO.cs" />
     <Compile Include="Services\FoodTruckDTO.cs" />
+    <Compile Include="Services\ReviewDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +309,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\models\businessUser.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\customerUser.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\FoodTruck.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\models\review.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
