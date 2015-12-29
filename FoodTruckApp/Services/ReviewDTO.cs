@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodTruckApp.Domain.Models {
-    class Review {
+namespace FoodTruckApp.Services {
+    class ReviewDTO {
 
         public int Id { get; set; }
 
         public int StarRating { get; set; }
 
-        public ApplicationUser CustomerUsername { get; set; }
+        public CustomerUserDTO CustomerUsername { get; set; }
 
         public string Message { get; set; }
 
-        public FoodTruck TruckId { get; set; }
+        public FoodTruckDTO TruckId { get; set; }
     }
 }
