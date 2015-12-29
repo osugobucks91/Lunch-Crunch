@@ -230,6 +230,7 @@
     <Compile Include="Services\BusinessUserDTO.cs" />
     <Compile Include="Services\CustomerUserDTO.cs" />
     <Compile Include="Services\FoodTruckDTO.cs" />
+    <Compile Include="Services\MenuItemDTO.cs" />
     <Compile Include="Services\ReviewDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
