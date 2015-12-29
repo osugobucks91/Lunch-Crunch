@@ -1,0 +1,25 @@
+﻿<div class="row text-center">
+    <div class="col-md-12 col-md-offset-6">
+        <br />
+        <form ng-submit="custLogin.login()">
+            <div class="row">
+                <input ng-model="custLogin.username" class="form-control" placeholder="Enter Username" />
+            </div>
+            <div class="row">
+                <input ng-model="custLogin.password" class="form-control" type="password" placeholder="Enter Password" />
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="Login" class="form-control" />
+            </div>
+            <br />
+            Don't have a user account? Please register below.
+            <br />
+        </form>
+     
+            <div class="row">
+                <input type="submit" value="Register" class="form-control ng-click="custLogin.goToRegister()"" />
+            </div>
+</div>
+</div>
+
