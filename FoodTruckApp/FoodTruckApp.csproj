@@ -203,6 +203,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\Models\FoodTruck.cs" />
     <Compile Include="Domain\Models\MenuItem.cs" />
+    <Compile Include="Domain\Models\Review.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Migrations\201512291905052_intital.cs" />
     <Compile Include="Migrations\201512291905052_intital.Designer.cs">
@@ -348,7 +349,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63967</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
