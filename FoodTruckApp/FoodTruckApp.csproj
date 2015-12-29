@@ -214,6 +214,7 @@
       <DependentUpon>201512291905371_test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
+    <Compile Include="Presentation\Controllers\FoodTruckController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -228,9 +229,9 @@
     <Compile Include="Domain\Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Results\ChallengeResult.cs" />
     <Compile Include="Services\BusinessUserDTO.cs" />
-    <Compile Include="Presentation\Controllers\FoodTruckController.cs" />
     <Compile Include="Services\CustomerUserDTO.cs" />
     <Compile Include="Services\FoodTruckDTO.cs" />
+    <Compile Include="Services\FoodTruckService.cs" />
     <Compile Include="Services\MenuItemDTO.cs" />
     <Compile Include="Services\ReviewDTO.cs" />
     <Compile Include="Startup.cs" />

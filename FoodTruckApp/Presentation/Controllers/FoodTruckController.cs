@@ -7,37 +7,32 @@ using System.Web.Http;
 
 namespace FoodTruckApp.Services
 {
-    [RoutePrefix("api/orders")]
+    [RoutePrefix("api/foodtruck")]
     public class FoodTrucksController : ApiController
     {
 
         private FoodTruckService _foodTruckService;
 
-        public FoodTrucksController(FoodTruckService _foodTruckService)
+        public FoodTrucksController(FoodTruckService foodTruckService)
         {
-            _foodTruckService = FoodTruckService;
+            _foodTruckService = foodTruckService;
         }
 
-        [HttpGet]
-        public IList<FoodTruckDTO> Get()
-        {
-            return _foodTruckService.List(User.Identity.Name);
-        }
-
-        [HttpPost]
-        public IHttpActionResult Post()
+        public IHttpActionResult Post(FoodTruckDTO newFoodTruck)
         {
            
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-
-                return BadRequest(ModelState);
-
+                newFoodTruck.BusinessOwner = new BusinessUserDTO() {
+                    UserName = User.Identity.Name
+                };
+                _foodTruckService.AddNewFoodTruck(newFoodTruck);
+                return Ok();
             }
 
-            _foodTruckService.CreateFoodTruck(User.Identity.Name);
-            return Ok();
-
+            else {
+                return BadRequest(ModelState);
+            }
         }
 
     }

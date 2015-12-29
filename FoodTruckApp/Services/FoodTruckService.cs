@@ -53,7 +53,7 @@ namespace FoodTruckApp.Services {
         }
 
         [HttpPost]
-        public AddNewFoodTruck(FoodTruckDTO newFoodTruck) {
+        public void AddNewFoodTruck(FoodTruckDTO newFoodTruck) {
             _repo.Add(Map(newFoodTruck));
             _repo.SaveChanges();
         }
