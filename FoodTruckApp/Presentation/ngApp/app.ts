@@ -3,7 +3,9 @@
         .config(function ($routeProvider) {
             $routeProvider
                 .when('/', {
-                    template: '<p>Hello World</p>'
+                    templateUrl: '/presentation/ngApp/views/home.html',
+                    controller: FoodTruckApp.Controllers.HomeController,
+                    controllerAs: 'home'
                 });
         });
 }

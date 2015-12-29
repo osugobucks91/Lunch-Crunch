@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -226,6 +226,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Presentation\ngApp\views\home.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -271,10 +272,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Presentation\ngApp\controllers\" />
     <Folder Include="Presentation\ngApp\models\" />
     <Folder Include="Presentation\ngApp\services\" />
-    <Folder Include="Presentation\ngApp\views\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +282,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
