@@ -1,5 +1,5 @@
 ﻿namespace FoodTruckApp.Controllers {
-    
+
     export class BusinessLoginController {
 
         public username: string;
@@ -25,9 +25,8 @@
                     this.loginMessage = 'invalid username or password';
                 });
         }
-
     }
     angular.module("FoodTruckApp").controller("businessAuthController", BusinessLoginController);
 
-    }
+}
 

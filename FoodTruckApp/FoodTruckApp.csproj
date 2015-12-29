@@ -274,8 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Presentation\ngApp\controllers\" />
-    <Folder Include="Presentation\ngApp\models\" />
     <Folder Include="Presentation\ngApp\services\" />
     <Folder Include="Services\" />
   </ItemGroup>
@@ -285,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
