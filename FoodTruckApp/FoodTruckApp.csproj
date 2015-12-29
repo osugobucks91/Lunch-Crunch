@@ -203,6 +203,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\Models\FoodTruck.cs" />
     <Compile Include="Domain\Models\MenuItem.cs" />
+    <Compile Include="Domain\Models\Review.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Migrations\201512291905052_intital.cs" />
     <Compile Include="Migrations\201512291905052_intital.Designer.cs">
