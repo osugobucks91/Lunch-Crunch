@@ -201,6 +201,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Domain\Models\MenuItem.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -226,7 +227,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Presentation\ngApp\views\businessLogin.html" />
     <Content Include="Presentation\ngApp\views\businessRegister.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
@@ -285,7 +285,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
