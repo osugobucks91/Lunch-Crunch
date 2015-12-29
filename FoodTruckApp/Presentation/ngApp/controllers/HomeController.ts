@@ -1,5 +1,6 @@
 ﻿namespace FoodTruckApp.Controllers {
 
+    //one more time
     export class HomeController {
 
         constructor(public $http, private $location) {
