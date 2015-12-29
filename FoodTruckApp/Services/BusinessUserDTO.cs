@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace FoodTruckApp.Services {
     class BusinessUserDTO {
 
-        public string Id;
+        public string Id { get; set; }
 
-        public string UserName;
+        public string UserName { get; set; }
 
-        public string Email;
+        public string Email { get; set; }
 
-        public string Password;
+        public string Password { get; set; }
+
+        public IList<FoodTruckDTO> FoodTrucks { get; set; }
     }
 }
