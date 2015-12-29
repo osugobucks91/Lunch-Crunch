@@ -226,6 +226,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Presentation\ngApp\views\businessRegister.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
@@ -274,8 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Presentation\ngApp\controllers\" />
-    <Folder Include="Presentation\ngApp\models\" />
     <Folder Include="Presentation\ngApp\services\" />
     <Folder Include="Services\" />
   </ItemGroup>
