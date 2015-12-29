@@ -229,7 +229,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Presentation\ngApp\views\businessRegister.html" />
-    <Content Include="Presentation\ngApp\views\createNewTruck.html" />
+    <Content Include="Presentation\ngApp\views\businessCreate.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
@@ -286,10 +286,13 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessCreateController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\customerUser.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\models\FoodTruck.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
