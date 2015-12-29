@@ -1,5 +1,8 @@
 namespace FoodTruckApp.Migrations {
+    using Domain.Models;
     using Infrastructure;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -23,6 +26,19 @@ namespace FoodTruckApp.Migrations {
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var userStore = new UserStore<ApplicationUser>(context);
+            var userManager = new ApplicationUserManager(userStore);
+
+            var test = userManager.FindByName("Test");
+
+            if (test == null) {
+                test = new ApplicationUser() {
+                    UserName = "test",
+                    Email = "test@test.com"
+                };
+                userManager.Create(test, "Password!1");
+            }
         }
     }
 }

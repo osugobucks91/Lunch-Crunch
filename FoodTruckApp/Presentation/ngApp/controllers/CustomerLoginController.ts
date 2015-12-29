@@ -23,6 +23,10 @@
                     this.loginMessage = 'Invalid username or password';
                 });
         }
+
+        public goToRegister() {
+            this.$location.path('/customer/register');
+        }
     }
     angular.module('AuctionSite').controller('loginController', CustomerLoginController);
 }
