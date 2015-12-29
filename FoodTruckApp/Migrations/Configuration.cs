@@ -39,6 +39,20 @@ namespace FoodTruckApp.Migrations {
                 };
                 userManager.Create(test, "Password!1");
             }
+
+            var business = userManager.FindByName("business@business.com");
+
+            if (business == null)
+            {
+                business = new ApplicationUser()
+                {
+                    UserName = "business@business.com",
+                    Email = "business@business.com",
+                };
+                userManager.Create(business, "Password!1");
+            };
+
+
         }
     }
 }

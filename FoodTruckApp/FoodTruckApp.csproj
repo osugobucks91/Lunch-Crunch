@@ -226,8 +226,13 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+<<<<<<< HEAD
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
+=======
+    <Content Include="Presentation\ngApp\views\login.html" />
+    <Content Include="Presentation\ngApp\views\home.html" />
+>>>>>>> f89b9d19e88a6ccd5a8478160d4c3e0585222358
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -273,8 +278,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
     <Folder Include="Presentation\ngApp\controllers\" />
     <Folder Include="Presentation\ngApp\models\" />
+=======
+>>>>>>> f89b9d19e88a6ccd5a8478160d4c3e0585222358
     <Folder Include="Presentation\ngApp\services\" />
     <Folder Include="Services\" />
   </ItemGroup>
@@ -284,6 +292,13 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
+<<<<<<< HEAD
+=======
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\models\customerUser.ts" />
+>>>>>>> f89b9d19e88a6ccd5a8478160d4c3e0585222358
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
