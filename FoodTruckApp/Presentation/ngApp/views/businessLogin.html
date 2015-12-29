@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <form ng-submit="businessAuthController.login()">
+        <div class="col-md-6 col-md-offset-3">
+            <label>
+                Username:
+                <input ng-model="businessAuthController.username" type="text" class="form-control" />
+            </label>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <label>
+                Password:
+                <input ng-model="businessAuthController.password" type="password" class="form-control" />
+            </label>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <input type="submit" value="login" />
+        </div>
+
+        <div class="col-md-6 col-md-offset-3">
+            or <a href="#/business/register">register</a> if you are new business user
+        </div>
+    </form>
+</div>
+
