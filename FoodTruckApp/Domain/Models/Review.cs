@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FoodTruckApp.Domain.Models {
-    class Review {
+    public class Review {
 
         public int Id { get; set; }
 

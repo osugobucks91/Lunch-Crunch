@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Collections.Generic;
 
 namespace FoodTruckApp.Domain.Models {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
@@ -13,5 +14,12 @@ namespace FoodTruckApp.Domain.Models {
             // Add custom user claims here
             return userIdentity;
         }
+
+        public IList<FoodTruck> FoodTrucks { get; set; }
+
+        public IList<MenuItem> MenuItems { get; set; }
+
+        public IList<Review> Reviews { get; set; }
+
     }
 }

@@ -28,5 +28,5 @@
             this.$location.path('/customer/register');
         }
     }
-    angular.module('AuctionSite').controller('loginController', CustomerLoginController);
+    angular.module('FoodTruckApp').controller('loginController', CustomerLoginController);
 }

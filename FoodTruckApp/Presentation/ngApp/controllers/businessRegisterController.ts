@@ -11,9 +11,9 @@
 
         public register() {
 
-            this.$http.post('/api/account/register', this.newBusiness)
+            this.$http.post('/api/Account/Register', this.newBusiness)
                 .then((response) => {
-                    this.$location.path('/business');
+                    this.$location.path('/business/create');
                     this.newBusiness = null;
                 })
                 .catch((response) => {

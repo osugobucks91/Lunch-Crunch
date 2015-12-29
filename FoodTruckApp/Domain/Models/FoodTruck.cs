@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace FoodTruckApp.Domain.Models {
-    class FoodTruck {
+    public class FoodTruck {
 
         public int Id { get; set; }
 

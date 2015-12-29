@@ -10,12 +10,12 @@
 
         constructor(private $http, private $window, private $location) { }
 
-        public businessLogin() {
+        public login() {
 
             let data = `grant_type=password&username=${this.username}&password=${this.password}`;
 
             this.$http.post('/token', data, {
-                headers: { 'Content-type': 'application/x-www-form-urlencoded' }
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             })
                 .then((response) => {
                     this.$window.localStorage.setItem('token', response.data['access_token']);

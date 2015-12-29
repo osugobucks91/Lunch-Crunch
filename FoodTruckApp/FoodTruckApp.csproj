@@ -205,6 +205,7 @@
     <Compile Include="Domain\Models\MenuItem.cs" />
     <Compile Include="Domain\Models\Review.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
     <Compile Include="Migrations\201512291905052_intital.cs" />
     <Compile Include="Migrations\201512291905052_intital.Designer.cs">
       <DependentUpon>201512291905052_intital.cs</DependentUpon>
@@ -214,7 +215,7 @@
       <DependentUpon>201512291905371_test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
-    <Compile Include="Presentation\Controllers\FoodTruckController.cs" />
+    <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

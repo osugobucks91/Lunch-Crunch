@@ -15,8 +15,8 @@ namespace FoodTruckApp.Infrastructure.Repository
 
         protected override IQueryable<FoodTruck> Include(IQueryable<FoodTruck> query)
         {
-            return query.Include(f => f.MenuItem)
-                    .Include(f => f.Review)
+            return query.Include(f => f.MenuItems)
+                    .Include(f => f.Reviews)
                     .Include(f => f.BusinessOwner);
         }
 

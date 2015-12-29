@@ -11,7 +11,7 @@
 
         public businessCreate() {
 
-            this.$http.post('/api/foodtruck', this.newFoodTruck)
+            this.$http.post('/api/foodtrucks', this.newFoodTruck)
                 .then((response) => {
                     this.$location.path('/business');
                     this.newFoodTruck = null;

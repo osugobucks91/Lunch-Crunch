@@ -1,4 +1,5 @@
 ﻿using FoodTruckApp.Domain.Models;
+using FoodTruckApp.Infrastructure.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace FoodTruckApp.Services {
-    class FoodTruckService {
+    public class FoodTruckService {
 
         private FoodTruckRepository _repo;
 

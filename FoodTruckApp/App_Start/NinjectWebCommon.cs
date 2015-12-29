@@ -12,7 +12,8 @@ namespace FoodTruckApp.App_Start {
     using System.Data.Entity;
     using Domain.Models;
     using Infrastructure;
-
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     public static class NinjectWebCommon {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
@@ -56,7 +57,8 @@ namespace FoodTruckApp.App_Start {
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel) {
-            kernel.Bind<DbContext>().To<ApplicationDbContext>();
+            kernel.Bind<DbContext>().To<ApplicationDbContext>().InRequestScope();
+            kernel.Bind<IUserStore<ApplicationUser>>().To<UserStore<ApplicationUser>>();
         }
     }
 }

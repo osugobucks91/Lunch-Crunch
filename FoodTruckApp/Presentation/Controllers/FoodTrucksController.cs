@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace FoodTruckApp.Services
 {
-    [RoutePrefix("api/foodtruck")]
+    [RoutePrefix("api/foodtrucks")]
     public class FoodTrucksController : ApiController
     {
 
