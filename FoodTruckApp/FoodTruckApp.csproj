@@ -286,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessCreateController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
