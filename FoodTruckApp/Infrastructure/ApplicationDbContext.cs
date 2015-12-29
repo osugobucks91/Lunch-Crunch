@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -14,5 +15,12 @@ namespace FoodTruckApp.Infrastructure {
         public static ApplicationDbContext Create() {
             return new ApplicationDbContext();
         }
+
+        public IDbSet<FoodTruck> FoodTrucks { get; set; }
+
+        public IDbSet<MenuItem> MenuItems { get; set; }
+
+        public IDbSet<Review> Reviews { get; set; }
+
     }
 }
