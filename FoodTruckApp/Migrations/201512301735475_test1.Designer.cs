@@ -13,7 +13,7 @@ namespace FoodTruckApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201512300217473_test1"; }
+            get { return "201512301735475_test1"; }
         }
         
         string IMigrationMetadata.Source

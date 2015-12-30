@@ -23,3 +23,4 @@ namespace FoodTruckApp.Domain.Models {
         public ApplicationUser BusinessOwner { get; set; }
     }
 }
+
