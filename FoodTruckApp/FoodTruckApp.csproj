@@ -249,13 +249,7 @@
     <Content Include="Presentation\ngApp\views\codercamps.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
-    <Content Include="Presentation\ngApp\views\hello.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
-    <Content Include="Presentation\ngApp\views\magic.html" />
-    <Content Include="Presentation\ngApp\views\mike.html" />
-    <Content Include="Presentation\ngApp\views\newfile.html" />
-    <Content Include="Presentation\ngApp\views\test2.html" />
-    <Content Include="Presentation\ngApp\views\testing.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
