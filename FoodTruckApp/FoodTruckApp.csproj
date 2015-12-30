@@ -246,11 +246,16 @@
     <Content Include="Presentation\ngApp\views\businessLogin.html" />
     <Content Include="Presentation\ngApp\views\businessRegister.html" />
     <Content Include="Presentation\ngApp\views\businessCreate.html" />
+    <Content Include="Presentation\ngApp\views\codercamps.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
+    <Content Include="Presentation\ngApp\views\hello.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
+    <Content Include="Presentation\ngApp\views\magic.html" />
     <Content Include="Presentation\ngApp\views\mike.html" />
-    <Content Include="Presentation\ngApp\views\test.html" />
+    <Content Include="Presentation\ngApp\views\newfile.html" />
+    <Content Include="Presentation\ngApp\views\test2.html" />
+    <Content Include="Presentation\ngApp\views\testing.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -266,6 +271,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Presentation\ngApp\views\again.html" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
