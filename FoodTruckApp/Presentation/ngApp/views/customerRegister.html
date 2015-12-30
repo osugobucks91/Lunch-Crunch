@@ -1,25 +1,39 @@
 ﻿<div class="row text-center">
-    <div class="col-md-12 col-md-offset-6">
-        <br />
-        <form ng-submit="custRegister.register()">
-            Register for your account here
-            <br />
-            <div class="row">
-                <input ng-model="custRegister.newCustomer.username" class="form-control" placeholder="Enter Username" />
-            </div>
-            <div class="row">
-                <input ng-model="custRegister.newCustomer.password" class="form-control" type="password" placeholder="Enter Password" />
-            </div>
-            <br />
-            <div class="row">
-                <input type="submit" value="Register" class="form-control" />
-            </div>
-            <br />
-            Already have an account? Please login below.
-            <br />
-        </form>
-        <div class="row">
-            <input type="submit" value="Login" class="form-control" ng-click="custRegister.goToLogin()" />
+    <form ng-submit="custRegister.register()">
+        <div class="col-md-4 col-md-offset-4">
+            <label>
+                Register account as a new customer
+            </label>
         </div>
-    </div>
+        <div class="col-md-4 col-md-offset-4">
+            <label>
+                Email:
+                <input ng-model="custRegister.newCustomer.email" class="form-control" placeholder="Enter Email" />
+            </label>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <label>
+                Password:
+                <input ng-model="custRegister.newCustomer.password" class="form-control" type="password" placeholder="Enter Password" />
+
+                <br />
+                <p>
+                    <input type="submit" value="Register" class="form-control" />
+                </p>
+
+            </label>
+        </div>
+
+        <div class="col-md-4 col-md-offset-4">
+            <label>
+                <p>
+                    Already have a customer account?
+                </p>
+                <p>
+                    Please <a href="#/customer/login">login</a>
+                </p>
+            </label>
+        </div>
+
+    </form>
 </div>

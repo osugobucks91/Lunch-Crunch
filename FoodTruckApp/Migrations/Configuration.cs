@@ -51,6 +51,7 @@ namespace FoodTruckApp.Migrations {
                 };
                 userManager.Create(business, "Password!1");
             };
+            context.SaveChanges();
 
         }
     }

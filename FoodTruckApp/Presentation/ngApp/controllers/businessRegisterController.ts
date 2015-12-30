@@ -11,7 +11,7 @@
 
         public register() {
 
-            this.$http.post('/api/Account/Register', this.newBusiness)
+            this.$http.post('/api/account/register', this.newBusiness)
                 .then((response) => {
                     this.$location.path('/business/create');
                     this.newBusiness = null;
@@ -20,7 +20,9 @@
                     this.validationErrors = [];
                     let modelState = response.data.modelState;
                     for (let error in modelState) {
+
                         this.validationErrors = this.validationErrors.concat(modelState[error]);
+
                     }
                 })
         }

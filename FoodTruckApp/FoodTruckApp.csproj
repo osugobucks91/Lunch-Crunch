@@ -206,13 +206,9 @@
     <Compile Include="Domain\Models\Review.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
-    <Compile Include="Migrations\201512291905052_intital.cs" />
-    <Compile Include="Migrations\201512291905052_intital.Designer.cs">
-      <DependentUpon>201512291905052_intital.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512291905371_test1.cs" />
-    <Compile Include="Migrations\201512291905371_test1.Designer.cs">
-      <DependentUpon>201512291905371_test1.cs</DependentUpon>
+    <Compile Include="Migrations\201512300217473_test1.cs" />
+    <Compile Include="Migrations\201512300217473_test1.Designer.cs">
+      <DependentUpon>201512300217473_test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
@@ -230,6 +226,7 @@
     <Compile Include="Domain\Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Results\ChallengeResult.cs" />
     <Compile Include="Services\BusinessUserDTO.cs" />
+    <Compile Include="Services\BusinessUserService.cs" />
     <Compile Include="Services\CustomerUserDTO.cs" />
     <Compile Include="Services\FoodTruckDTO.cs" />
     <Compile Include="Services\FoodTruckService.cs" />
@@ -297,6 +294,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Presentation\ngApp\services\" />
+    <Folder Include="Services\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -328,11 +326,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512291905052_intital.resx">
-      <DependentUpon>201512291905052_intital.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512291905371_test1.resx">
-      <DependentUpon>201512291905371_test1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512300217473_test1.resx">
+      <DependentUpon>201512300217473_test1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
