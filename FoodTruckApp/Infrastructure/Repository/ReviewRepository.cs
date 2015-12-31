@@ -18,5 +18,12 @@ namespace FoodTruckApp.Infrastructure.Repository
                         .Include(r => r.TruckId);
         }
 
+        public Review FindById(int id, string username)
+        {
+            return (from f in Table
+                    where f.Id == id && f.CustomerUsername.UserName == username
+                    select f).FirstOrDefault();
+        }
+
     }
 }

@@ -20,5 +20,11 @@ namespace FoodTruckApp.Infrastructure.Repository
                     .Include(f => f.BusinessOwner);
         }
 
+        public FoodTruck FindById(int id, string username)
+        {
+            return (from f in Table
+                    where f.Id == id && f.BusinessOwner.UserName == username
+                    select f).FirstOrDefault();
+        }
     }
 }

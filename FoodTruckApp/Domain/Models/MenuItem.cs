@@ -18,5 +18,7 @@ namespace FoodTruckApp.Domain.Models {
 
         public ApplicationUser BusinessOwner { get; set; }
         
+        public FoodTruck FoodTruck { get; set; }
+
     }
 }
