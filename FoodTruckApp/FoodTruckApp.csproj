@@ -208,10 +208,6 @@
     <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
     <Compile Include="Infrastructure\Repository\MenuItemRepository.cs" />
     <Compile Include="Infrastructure\Repository\ReviewRepository.cs" />
-    <Compile Include="Migrations\201512302356141_test1.cs" />
-    <Compile Include="Migrations\201512302356141_test1.Designer.cs">
-      <DependentUpon>201512302356141_test1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -328,11 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512302356141_test1.resx">
-      <DependentUpon>201512302356141_test1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
