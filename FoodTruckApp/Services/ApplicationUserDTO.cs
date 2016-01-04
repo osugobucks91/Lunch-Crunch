@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FoodTruckApp.Services {
-    public class CustomerUserDTO {
+    public class ApplicationUserDTO {
 
         public string Id { get; set; }
 

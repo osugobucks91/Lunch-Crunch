@@ -19,7 +19,7 @@
             })
                 .then((response) => {
                     this.$window.localStorage.setItem('token', response.data['access_token']);
-                    this.$location.path('/business');
+                    this.$location.path('/map');
                 })
                 .catch((response) => {
                     this.loginMessage = 'invalid username or password';

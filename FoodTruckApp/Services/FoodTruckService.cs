@@ -23,7 +23,7 @@ namespace FoodTruckApp.Services {
                 Image = dbFoodTruck.Image,
                 Description = dbFoodTruck.Description,
                 Location = dbFoodTruck.Location,
-                BusinessOwner = new BusinessUserDTO() {
+                BusinessOwner = new ApplicationUserDTO() {
                     Id = dbFoodTruck.BusinessOwner.Id,
                     UserName = dbFoodTruck.BusinessOwner.UserName
                 },

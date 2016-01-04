@@ -14,14 +14,14 @@ namespace FoodTruckApp.Infrastructure.Repository
 
         protected override IQueryable<Review> Include(IQueryable<Review> query)
         {
-            return query.Include(r => r.CustomerUsername)
+            return query.Include(r => r.Username)
                         .Include(r => r.TruckId);
         }
 
         public Review FindById(int id, string username)
         {
             return (from f in Table
-                    where f.Id == id && f.CustomerUsername.UserName == username
+                    where f.Id == id && f.Username.UserName == username
                     select f).FirstOrDefault();
         }
 

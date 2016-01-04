@@ -1,6 +1,6 @@
 ﻿namespace FoodTruckApp.Controllers {
 
-    import Business = FoodTruckApp.Models.BusinessUser;
+    import Business = FoodTruckApp.Models.ApplicationUser;
 
     export class BusinessRegisterController {
 
@@ -13,7 +13,7 @@
 
             this.$http.post('/api/account/register', this.newBusiness)
                 .then((response) => {
-                    this.$location.path('/business/create');
+                    this.$location.path('/business/login');
                     this.newBusiness = null;
                 })
                 .catch((response) => {

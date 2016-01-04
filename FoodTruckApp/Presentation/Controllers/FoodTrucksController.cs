@@ -23,7 +23,7 @@ namespace FoodTruckApp.Services
            
             if (ModelState.IsValid)
             {
-                newFoodTruck.BusinessOwner = new BusinessUserDTO() {
+                newFoodTruck.BusinessOwner = new ApplicationUserDTO() {
                     UserName = User.Identity.Name
                 };
                 _foodTruckService.AddNewFoodTruck(newFoodTruck);

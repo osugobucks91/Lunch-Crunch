@@ -11,7 +11,7 @@ namespace FoodTruckApp.Services {
 
         public int StarRating { get; set; }
 
-        public CustomerUserDTO CustomerUsername { get; set; }
+        public ApplicationUserDTO CustomerUsername { get; set; }
 
         public string Message { get; set; }
 

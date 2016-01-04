@@ -1,6 +1,6 @@
 ﻿namespace FoodTruckApp.Models {
 
-    export class BusinessUser {
+    export class ApplicationUser {
 
         public id: string;
 

@@ -8,9 +8,9 @@
 
         public message: string;
 
-        public customerUserName;
+        public UserName;
 
-        public businessOwner;
+        public Owner;
 
         public truckId: FoodTruck;
     }

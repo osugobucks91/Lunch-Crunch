@@ -8,5 +8,6 @@
         public description: string;
         public image: string;      //should be optional
         public owner;
+        public truckID: FoodTruck;
     }
 }
