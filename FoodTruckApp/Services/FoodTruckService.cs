@@ -53,10 +53,17 @@ namespace FoodTruckApp.Services {
             } : null;
         }
 
+        //Add a new food truck
         [HttpPost]
         public void AddNewFoodTruck(FoodTruckDTO newFoodTruck) {
             _repo.Add(Map(newFoodTruck));
             _repo.SaveChanges();
+        }
+
+        //Get a list of food trucks for list view
+        public IList<FoodTruckDTO> List() {
+            return (from a in _repo.List()
+                    select Map(a)).ToList();
         }
     }
 }

@@ -18,6 +18,12 @@ namespace FoodTruckApp.Services
             _foodTruckService = foodTruckService;
         }
 
+        //Get a List of food trucks for list view
+        public IList<FoodTruckDTO> Get() {
+            return _foodTruckService.List();
+        }
+
+        //Add a new food truck
         public IHttpActionResult Post(FoodTruckDTO newFoodTruck)
         {
            
