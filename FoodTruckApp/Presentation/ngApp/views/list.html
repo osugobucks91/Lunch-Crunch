@@ -7,7 +7,7 @@
                 Favorite food trucks
             </label>
         </div>
-        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks | filter: favorites">
+        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks">
             <label>
                 {{list.truck.name}}
             </label>
@@ -17,7 +17,7 @@
                 Favorite food trucks
             </label>
         </div>
-        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks | filter: popular">
+        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks | orderBy: truck.rating: reverse">
             <label>
                 {{list.truck.name}}
             </label>
