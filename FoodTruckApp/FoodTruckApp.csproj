@@ -247,6 +247,7 @@
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
+    <Content Include="Presentation\ngApp\views\map.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
