@@ -17,5 +17,7 @@
         public reviews: Review[];
 
         public owner;
+
+        public category: string;
     }
 }
