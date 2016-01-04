@@ -22,5 +22,7 @@ namespace FoodTruckApp.Services {
         public IList<ReviewDTO> Reviews { get; set; }
 
         public ApplicationUserDTO BusinessOwner { get; set; }
+
+        public string Category { get; set; }
     }
 }
