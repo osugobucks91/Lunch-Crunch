@@ -1,16 +1,30 @@
 ﻿<div class="row  text-center">
-    <form ng-submit="businessLogin.login()">
-        <div class="col-md-4 col-md-offset-4">
-            <label>
-                Food truck location map
-            </label>
-        </div>
-        <div class="col-md-4 col-md-offset-4">
-            <label>
-                <img class="img-responsive" style="width:150px;height:150px" src="http://www.sitesatlas.com/Flash/USCan/static/TXFH.gif" />
-            </label>
-            
 
-        </div>
-    </form>
+    
+    <div class="col-md-4 col-md-offset-4">
+        <label>
+            Food truck location map
+        </label>
+
+    </div>
+
+    <div class="col-md-4 col-md-offset-4">
+        <label>
+            <input ng-model="customer.address" class="form-control" placeholder="Type Address" />
+        </label>
+    </div>
+
+    <div class="col-md-4 col-md-offset-4">
+        <label>
+            <img class="img-responsive" style="width:150px;height:150px" src="http://www.sitesatlas.com/Flash/USCan/static/TXFH.gif" />
+        </label>
+    </div>
+
+    <div class="col-md-4 col-md-offset-4">
+        <label>
+            <label class="btn btn-default form-control" ng-click="map.goToList()">Food Truck List</label>
+        </label>
+    </div>
+    
 </div>
+
