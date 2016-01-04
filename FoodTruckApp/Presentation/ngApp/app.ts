@@ -54,6 +54,11 @@
                     controller: FoodTruckApp.Controllers.MapController,
                     controllerAs: 'map'
                 })
+                .when('/list', {
+                    templateUrl: '/presentation/ngApp/views/list.html',
+                    controller: FoodTruckApp.Controllers.FoodTruckListController,
+                    controllerAs: 'list'
+                })
             $httpProvider.interceptors.push('authInterceptor');
         });
 }
