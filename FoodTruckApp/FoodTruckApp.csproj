@@ -307,6 +307,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\businessRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\ApplicationUser.ts" />

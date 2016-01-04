@@ -1,28 +1,33 @@
 ﻿<div class="row text-center">
 
-    <form ng-submit="custLogin.login()">
+    <form>
 
         <div class="col-md-4 col-md-offset-4">
             <label>
                 Favorite food trucks
             </label>
         </div>
-        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks">
+        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.foodTrucks">
             <label>
-                {{list.truck.name}}
+                {{truck.name}}
             </label>
         </div>
         <div class="col-md-4 col-md-offset-4">
             <label>
-                Favorite food trucks
+                Popular food trucks
             </label>
         </div>
-        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.FoodTrucks | orderBy: truck.rating: reverse">
-            <label>
-                {{list.truck.name}}
+        <div class="col-md-4 col-md-offset-4" ng-repeat="truck in list.foodTrucks | orderBy: truck.rating: reverse">
+            <label ng-click="list.goToFoodTruck(truck.id)">
+                {{truck.name}}
             </label>
         </div>
 
+        <div class="col-md-4 col-md-offset-4">
+            <label>
+                <label class="btn btn-default form-control" ng-click="list.goToMap()">Food Truck Map</label>
+            </label>
+        </div>
 
     </form>
 </div>
