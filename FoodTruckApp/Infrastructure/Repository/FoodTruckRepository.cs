@@ -17,13 +17,13 @@ namespace FoodTruckApp.Infrastructure.Repository
         {
             return query.Include(f => f.MenuItems)
                     .Include(f => f.Reviews)
-                    .Include(f => f.Owner);
+                    .Include(f => f.BusinessOwner);
         }
 
         public FoodTruck FindById(int id, string username)
         {
             return (from f in Table
-                    where f.Id == id && f.Owner.UserName == username
+                    where f.Id == id && f.BusinessOwner.UserName == username
                     select f).FirstOrDefault();
         }
     }

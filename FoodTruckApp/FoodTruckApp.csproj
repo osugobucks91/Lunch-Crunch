@@ -208,6 +208,10 @@
     <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
     <Compile Include="Infrastructure\Repository\MenuItemRepository.cs" />
     <Compile Include="Infrastructure\Repository\ReviewRepository.cs" />
+    <Compile Include="Migrations\201601041606505_noBusiness.cs" />
+    <Compile Include="Migrations\201601041606505_noBusiness.Designer.cs">
+      <DependentUpon>201601041606505_noBusiness.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -302,6 +306,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\ApplicationUser.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\FoodTruck.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\review.ts" />
@@ -317,6 +322,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601041606505_noBusiness.resx">
+      <DependentUpon>201601041606505_noBusiness.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

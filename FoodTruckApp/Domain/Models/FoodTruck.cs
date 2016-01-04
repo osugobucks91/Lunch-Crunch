@@ -20,7 +20,7 @@ namespace FoodTruckApp.Domain.Models {
 
         public IList<Review> Reviews { get; set; }
 
-        public ApplicationUser Owner { get; set; }
+        public ApplicationUser BusinessOwner { get; set; }
     }
 }
 

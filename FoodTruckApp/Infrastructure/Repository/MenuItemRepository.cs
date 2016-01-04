@@ -14,14 +14,14 @@ namespace FoodTruckApp.Infrastructure.Repository
 
         protected override IQueryable<MenuItem> Include(IQueryable<MenuItem> query)
         {
-            return query.Include(m => m.Owner)
+            return query.Include(m => m.BusinessOwner)
                         .Include(m => m.FoodTruck);
         }
 
         public MenuItem FindById(int id, string username)
         {
             return (from m in Table
-                    where m.Id == id && m.Owner.UserName == username
+                    where m.Id == id && m.BusinessOwner.UserName == username
                     select m).FirstOrDefault();
         }
 
