@@ -2,22 +2,19 @@
 
     import FoodTruck = FoodTruckApp.Models.FoodTruck;
 
-    export class FoodTruckDescriptionController
-    {
+    export class ReviewsController {
 
         public foodTruck: FoodTruck;
 
-        constructor(private $http, private $location, private $routeParams)
-        {
+        constructor(private $http, private $location, private $routeParams) {
             $http.get('/api/foodtrucks/' + $routeParams['id'])
-                .then((response) =>
-                {
+                .then((response) => {
                     this.foodTruck = response.data;
                 })
-                .then(() =>
-                {
+                .then(() => {
                     this.foodTruck.rating = this.foodTruck.reviews.reduce(function (prev, curr) { return prev + curr.starRating }, 0) / this.foodTruck.reviews.length;
                 });
         }
     }
+
 }

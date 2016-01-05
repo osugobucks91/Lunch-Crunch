@@ -62,7 +62,17 @@
                 .when('/description/:id', {
                     templateUrl: '/presentation/ngApp/views/description.html',
                     controller: FoodTruckApp.Controllers.FoodTruckDescriptionController,
-                    controllerAs: 'description'
+                    controllerAs: 'ftc'
+                })
+                .when('/menu/:id', {
+                    templateUrl: '/presentation/ngApp/views/menu.html',
+                    controller: FoodTruckApp.Controllers.FoodTruckDescriptionController,
+                    controllerAs: 'ftc'
+                })
+                .when('/reviews/:id', {
+                    templateUrl: '/presentation/ngApp/views/reviews.html',
+                    controller: FoodTruckApp.Controllers.FoodTruckDescriptionController,
+                    controllerAs: 'ftc'
                 })
             $httpProvider.interceptors.push('authInterceptor');
         });

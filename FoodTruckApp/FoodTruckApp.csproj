@@ -250,6 +250,8 @@
     <Content Include="Presentation\ngApp\views\home.html" />
     <Content Include="Presentation\ngApp\views\list.html" />
     <Content Include="Presentation\ngApp\views\map.html" />
+    <Content Include="Presentation\ngApp\views\menu.html" />
+    <Content Include="Presentation\ngApp\views\reviews.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -311,6 +313,8 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\MenuController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\ReviewsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\ApplicationUser.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\FoodTruck.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\review.ts" />
