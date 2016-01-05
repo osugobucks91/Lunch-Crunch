@@ -21,8 +21,15 @@
                 })
         }
 
-        public goToMap() {
+        public goToMap()
+        {
             this.$location.path('/map');
+        }
+
+        public goToFoodTruck(id)
+        {
+            this.$location.path(`/description/${id}`);
+
         }
 
     }

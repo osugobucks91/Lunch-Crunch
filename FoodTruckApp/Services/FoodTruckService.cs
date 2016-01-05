@@ -68,5 +68,10 @@ namespace FoodTruckApp.Services {
             return (from a in _repo.List()
                     select Map(a)).ToList();
         }
+
+        public FoodTruckDTO FindById(int id)
+        {
+            return Map(_repo.FindById(id));
+        }
     }
 }

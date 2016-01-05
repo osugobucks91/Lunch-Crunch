@@ -246,6 +246,7 @@
     <Content Include="Presentation\ngApp\views\businessRegister.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
+    <Content Include="Presentation\ngApp\views\description.html" />
     <Content Include="Presentation\ngApp\views\home.html" />
     <Content Include="Presentation\ngApp\views\list.html" />
     <Content Include="Presentation\ngApp\views\map.html" />
@@ -306,6 +307,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\businessRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckDescriptionController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />

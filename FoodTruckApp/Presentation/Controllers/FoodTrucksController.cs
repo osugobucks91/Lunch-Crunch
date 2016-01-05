@@ -41,5 +41,19 @@ namespace FoodTruckApp.Services
             }
         }
 
+        [Route("{id}")]
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+
+            var foodTruck = _foodTruckService.FindById(id); 
+
+            if (foodTruck != null)
+            {
+                return Ok(foodTruck);
+            }
+            return BadRequest();
+            
+        }
     }
 }
