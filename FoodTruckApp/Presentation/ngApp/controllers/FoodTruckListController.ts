@@ -14,10 +14,16 @@
                 .then((response) => {
                     this.foodTrucks = response.data;
                 })
+                .then(() => {
+                    for (let truck of this.foodTrucks) {
+                        truck.rating = truck.reviews.reduce(function (prev, curr) { return prev + curr.starRating }, 0) / truck.reviews.length;
+                    }
+                })
         }
 
         public goToMap() {
             this.$location.path('/map');
         }
+
     }
 }

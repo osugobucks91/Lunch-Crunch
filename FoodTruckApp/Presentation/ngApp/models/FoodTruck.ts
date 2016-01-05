@@ -16,8 +16,10 @@
 
         public reviews: Review[];
 
-        public owner;
+        //public owner;
 
         public category: string;
+
+        public rating: number;
     }
 }

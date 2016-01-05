@@ -208,9 +208,9 @@
     <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
     <Compile Include="Infrastructure\Repository\MenuItemRepository.cs" />
     <Compile Include="Infrastructure\Repository\ReviewRepository.cs" />
-    <Compile Include="Migrations\201601041606505_noBusiness.cs" />
-    <Compile Include="Migrations\201601041606505_noBusiness.Designer.cs">
-      <DependentUpon>201601041606505_noBusiness.cs</DependentUpon>
+    <Compile Include="Migrations\201601051657086_test.cs" />
+    <Compile Include="Migrations\201601051657086_test.Designer.cs">
+      <DependentUpon>201601051657086_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
@@ -295,7 +295,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Presentation\ngApp\services\" />
-    <Folder Include="Services\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -327,8 +326,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601041606505_noBusiness.resx">
-      <DependentUpon>201601041606505_noBusiness.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601051657086_test.resx">
+      <DependentUpon>201601051657086_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

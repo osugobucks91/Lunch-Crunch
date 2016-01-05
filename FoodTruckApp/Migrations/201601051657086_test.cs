@@ -3,7 +3,7 @@ namespace FoodTruckApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class noBusiness : DbMigration
+    public partial class test : DbMigration
     {
         public override void Up()
         {
@@ -16,11 +16,40 @@ namespace FoodTruckApp.Migrations
                         Image = c.String(),
                         Description = c.String(),
                         Location = c.String(),
-                        BusinessOwner_Id = c.String(maxLength: 128),
+                        Category = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.MenuItems",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Description = c.String(),
+                        ImageUrl = c.String(),
+                        FoodTruck_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.BusinessOwner_Id)
-                .Index(t => t.BusinessOwner_Id);
+                .ForeignKey("dbo.FoodTrucks", t => t.FoodTruck_Id)
+                .Index(t => t.FoodTruck_Id);
+            
+            CreateTable(
+                "dbo.Reviews",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        StarRating = c.Int(nullable: false),
+                        Message = c.String(),
+                        CustomerUsername_Id = c.String(maxLength: 128),
+                        TruckId_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AspNetUsers", t => t.CustomerUsername_Id)
+                .ForeignKey("dbo.FoodTrucks", t => t.TruckId_Id)
+                .Index(t => t.CustomerUsername_Id)
+                .Index(t => t.TruckId_Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -68,40 +97,6 @@ namespace FoodTruckApp.Migrations
                 .Index(t => t.UserId);
             
             CreateTable(
-                "dbo.MenuItems",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Description = c.String(),
-                        ImageUrl = c.String(),
-                        BusinessOwner_Id = c.String(maxLength: 128),
-                        FoodTruck_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.BusinessOwner_Id)
-                .ForeignKey("dbo.FoodTrucks", t => t.FoodTruck_Id)
-                .Index(t => t.BusinessOwner_Id)
-                .Index(t => t.FoodTruck_Id);
-            
-            CreateTable(
-                "dbo.Reviews",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        StarRating = c.Int(nullable: false),
-                        Message = c.String(),
-                        CustomerUsername_Id = c.String(maxLength: 128),
-                        TruckId_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.CustomerUsername_Id)
-                .ForeignKey("dbo.FoodTrucks", t => t.TruckId_Id)
-                .Index(t => t.CustomerUsername_Id)
-                .Index(t => t.TruckId_Id);
-            
-            CreateTable(
                 "dbo.AspNetUserRoles",
                 c => new
                     {
@@ -129,32 +124,28 @@ namespace FoodTruckApp.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Reviews", "TruckId_Id", "dbo.FoodTrucks");
+            DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Reviews", "CustomerUsername_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.MenuItems", "FoodTruck_Id", "dbo.FoodTrucks");
-            DropForeignKey("dbo.MenuItems", "BusinessOwner_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.FoodTrucks", "BusinessOwner_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.MenuItems", "FoodTruck_Id", "dbo.FoodTrucks");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
-            DropIndex("dbo.Reviews", new[] { "TruckId_Id" });
-            DropIndex("dbo.Reviews", new[] { "CustomerUsername_Id" });
-            DropIndex("dbo.MenuItems", new[] { "FoodTruck_Id" });
-            DropIndex("dbo.MenuItems", new[] { "BusinessOwner_Id" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.FoodTrucks", new[] { "BusinessOwner_Id" });
+            DropIndex("dbo.Reviews", new[] { "TruckId_Id" });
+            DropIndex("dbo.Reviews", new[] { "CustomerUsername_Id" });
+            DropIndex("dbo.MenuItems", new[] { "FoodTruck_Id" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");
-            DropTable("dbo.Reviews");
-            DropTable("dbo.MenuItems");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.Reviews");
+            DropTable("dbo.MenuItems");
             DropTable("dbo.FoodTrucks");
         }
     }

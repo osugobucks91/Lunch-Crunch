@@ -410,84 +410,84 @@
                 userManager.Create(patrick, "Password!1");
             }
 
-            //-----food truck owners---------
-            var business = userManager.FindByName("business@business.com");
+            ////-----food truck owners---------
+            //var business = userManager.FindByName("business@business.com");
 
-            if (business == null)
-            {
-                business = new ApplicationUser()
-                {
-                    UserName = "business@business.com",
-                    Email = "business@business.com",
-                };
-                userManager.Create(business, "Password!1");
-            };
+            //if (business == null)
+            //{
+            //    business = new ApplicationUser()
+            //    {
+            //        UserName = "business@business.com",
+            //        Email = "business@business.com",
+            //    };
+            //    userManager.Create(business, "Password!1");
+            //};
 
-            var jacobbelly = userManager.FindByName("jacob.belly@gmail.com");
-            if (jacobbelly == null)
-            {
-                jacobbelly = new ApplicationUser()
-                {
-                    UserName = "jacob.belly@gmail.com",
-                    Email = "jacob.belly@gmail.com"
-                };
-                userManager.Create(jacobbelly, "Password!1");
-            }
+            //var jacobbelly = userManager.FindByName("jacob.belly@gmail.com");
+            //if (jacobbelly == null)
+            //{
+            //    jacobbelly = new ApplicationUser()
+            //    {
+            //        UserName = "jacob.belly@gmail.com",
+            //        Email = "jacob.belly@gmail.com"
+            //    };
+            //    userManager.Create(jacobbelly, "Password!1");
+            //}
 
-            var ismaildasman = userManager.FindByName("ismail.dasman@gmail.com");
-            if (ismaildasman == null)
-            {
-                ismaildasman = new ApplicationUser()
-                {
-                    UserName = "ismail.dasman@gmail.com",
-                    Email = "ismail.dasman@gmail.com"
-                };
-                userManager.Create(ismaildasman, "Password!1");
-            }
+            //var ismaildasman = userManager.FindByName("ismail.dasman@gmail.com");
+            //if (ismaildasman == null)
+            //{
+            //    ismaildasman = new ApplicationUser()
+            //    {
+            //        UserName = "ismail.dasman@gmail.com",
+            //        Email = "ismail.dasman@gmail.com"
+            //    };
+            //    userManager.Create(ismaildasman, "Password!1");
+            //}
 
-            var john = userManager.FindByName("john.saint@gmail.com");
-            if (john == null)
-            {
-                john = new ApplicationUser()
-                {
-                    UserName = "john.saint@gmail.com",
-                    Email = "john.saint@gmail.com"
-                };
-                userManager.Create(john, "Password!1");
-            }
+            //var john = userManager.FindByName("john.saint@gmail.com");
+            //if (john == null)
+            //{
+            //    john = new ApplicationUser()
+            //    {
+            //        UserName = "john.saint@gmail.com",
+            //        Email = "john.saint@gmail.com"
+            //    };
+            //    userManager.Create(john, "Password!1");
+            //}
 
-            var bernie = userManager.FindByName("bernie.smith@gmail.com");
-            if (bernie == null)
-            {
-                bernie = new ApplicationUser()
-                {
-                    UserName = "bernie.smith@gmail.com",
-                    Email = "bernie.smith@gmail.com"
-                };
-                userManager.Create(bernie, "Password!1");
-            }
+            //var bernie = userManager.FindByName("bernie.smith@gmail.com");
+            //if (bernie == null)
+            //{
+            //    bernie = new ApplicationUser()
+            //    {
+            //        UserName = "bernie.smith@gmail.com",
+            //        Email = "bernie.smith@gmail.com"
+            //    };
+            //    userManager.Create(bernie, "Password!1");
+            //}
 
-            var gregskratch = userManager.FindByName("greg.skratch@gmail.com");
-            if (gregskratch == null)
-            {
-                gregskratch = new ApplicationUser()
-                {
-                    UserName = "greg.skratch@gmail.com",
-                    Email = "greg.skratch@gmail.com"
-                };
-                userManager.Create(gregskratch, "Password!1");
-            }
+            //var gregskratch = userManager.FindByName("greg.skratch@gmail.com");
+            //if (gregskratch == null)
+            //{
+            //    gregskratch = new ApplicationUser()
+            //    {
+            //        UserName = "greg.skratch@gmail.com",
+            //        Email = "greg.skratch@gmail.com"
+            //    };
+            //    userManager.Create(gregskratch, "Password!1");
+            //}
 
-            var bobwaffle = userManager.FindByName("bob.waffle@gmail.com");
-            if (bobwaffle == null)
-            {
-                bobwaffle = new ApplicationUser()
-                {
-                    UserName = "bob.waffle@gmail.com",
-                    Email = "bob.waffle@gmail.com"
-                };
-                userManager.Create(bobwaffle, "Password!1");
-            }
+            //var bobwaffle = userManager.FindByName("bob.waffle@gmail.com");
+            //if (bobwaffle == null)
+            //{
+            //    bobwaffle = new ApplicationUser()
+            //    {
+            //        UserName = "bob.waffle@gmail.com",
+            //        Email = "bob.waffle@gmail.com"
+            //    };
+            //    userManager.Create(bobwaffle, "Password!1");
+            //}
 
             ReviewRepository reviewRepo = new ReviewRepository(context);
 
@@ -514,31 +514,31 @@
 
             MenuItemRepository menuItemRepo = new MenuItemRepository(context);
 
-            var menuItem1 = menuItemRepo.FindById(1, null);
-            var menuItem2 = menuItemRepo.FindById(2, null);
-            var menuItem3 = menuItemRepo.FindById(3, null);
-            var menuItem4 = menuItemRepo.FindById(4, null);
-            var menuItem5 = menuItemRepo.FindById(5, null);
-            var menuItem6 = menuItemRepo.FindById(6, null);
-            var menuItem7 = menuItemRepo.FindById(7, null);
-            var menuItem8 = menuItemRepo.FindById(8, null);
-            var menuItem9 = menuItemRepo.FindById(9, null);
-            var menuItem10 = menuItemRepo.FindById(10, null);
-            var menuItem11 = menuItemRepo.FindById(11, null);
-            var menuItem12 = menuItemRepo.FindById(12, null);
-            var menuItem13 = menuItemRepo.FindById(13, null);
-            var menuItem14 = menuItemRepo.FindById(14, null);
-            var menuItem15 = menuItemRepo.FindById(15, null);
-            var menuItem16 = menuItemRepo.FindById(16, null);
+            var menuItem1 = menuItemRepo.FindById(1);
+            var menuItem2 = menuItemRepo.FindById(2);
+            var menuItem3 = menuItemRepo.FindById(3);
+            var menuItem4 = menuItemRepo.FindById(4);
+            var menuItem5 = menuItemRepo.FindById(5);
+            var menuItem6 = menuItemRepo.FindById(6);
+            var menuItem7 = menuItemRepo.FindById(7);
+            var menuItem8 = menuItemRepo.FindById(8);
+            var menuItem9 = menuItemRepo.FindById(9);
+            var menuItem10 = menuItemRepo.FindById(10);
+            var menuItem11 = menuItemRepo.FindById(11);
+            var menuItem12 = menuItemRepo.FindById(12);
+            var menuItem13 = menuItemRepo.FindById(13);
+            var menuItem14 = menuItemRepo.FindById(14);
+            var menuItem15 = menuItemRepo.FindById(15);
+            var menuItem16 = menuItemRepo.FindById(16);
 
             FoodTruckRepository foodTruckRepo = new FoodTruckRepository(context);
 
-            var foodTruck1 = foodTruckRepo.FindById(1, null);
-            var foodTruck2 = foodTruckRepo.FindById(2, null);
-            var foodTruck3 = foodTruckRepo.FindById(3, null);
-            var foodTruck4 = foodTruckRepo.FindById(4, null);
-            var foodTruck5 = foodTruckRepo.FindById(5, null);
-            var foodTruck6 = foodTruckRepo.FindById(6, null);
+            var foodTruck1 = foodTruckRepo.FindById(1);
+            var foodTruck2 = foodTruckRepo.FindById(2);
+            var foodTruck3 = foodTruckRepo.FindById(3);
+            var foodTruck4 = foodTruckRepo.FindById(4);
+            var foodTruck5 = foodTruckRepo.FindById(5);
+            var foodTruck6 = foodTruckRepo.FindById(6);
 
             review1.CustomerUsername = daniel;
             review1.TruckId = foodTruck1;
@@ -581,45 +581,45 @@
             review20.CustomerUsername = kara;
             review20.TruckId = foodTruck6;
 
-            menuItem1.BusinessOwner = jacobbelly;
+            //menuItem1.BusinessOwner = jacobbelly;
             menuItem1.FoodTruck = foodTruck1;
-            menuItem2.BusinessOwner = jacobbelly;
+            //menuItem2.BusinessOwner = jacobbelly;
             menuItem2.FoodTruck = foodTruck1;
-            menuItem3.BusinessOwner = jacobbelly;
+            //menuItem3.BusinessOwner = jacobbelly;
             menuItem3.FoodTruck = foodTruck1;
-            menuItem4.BusinessOwner = jacobbelly;
+            //menuItem4.BusinessOwner = jacobbelly;
             menuItem4.FoodTruck = foodTruck1;
-            menuItem5.BusinessOwner = ismaildasman;
+            //menuItem5.BusinessOwner = ismaildasman;
             menuItem5.FoodTruck=foodTruck2;
-            menuItem6.BusinessOwner = ismaildasman;
+            //menuItem6.BusinessOwner = ismaildasman;
             menuItem6.FoodTruck = foodTruck2;
-            menuItem7.BusinessOwner = john;
+            //menuItem7.BusinessOwner = john;
             menuItem7.FoodTruck=foodTruck3;
-            menuItem8.BusinessOwner = john;
+            //menuItem8.BusinessOwner = john;
             menuItem8.FoodTruck = foodTruck3;
-            menuItem9.BusinessOwner = john;
+            //menuItem9.BusinessOwner = john;
             menuItem9.FoodTruck = foodTruck3;
-            menuItem10.BusinessOwner = john;
+            //menuItem10.BusinessOwner = john;
             menuItem10.FoodTruck = foodTruck3;
-            menuItem11.BusinessOwner = bernie;
+            //menuItem11.BusinessOwner = bernie;
             menuItem11.FoodTruck = foodTruck4;
-            menuItem12.BusinessOwner = bernie;
+            //menuItem12.BusinessOwner = bernie;
             menuItem12.FoodTruck = foodTruck4;
-            menuItem13.BusinessOwner = gregskratch;
+            //menuItem13.BusinessOwner = gregskratch;
             menuItem13.FoodTruck = foodTruck5;
-            menuItem14.BusinessOwner = gregskratch;
+            //menuItem14.BusinessOwner = gregskratch;
             menuItem14.FoodTruck = foodTruck5;
-            menuItem15.BusinessOwner = bobwaffle;
+            //menuItem15.BusinessOwner = bobwaffle;
             menuItem15.FoodTruck = foodTruck6;
-            menuItem16.BusinessOwner = bobwaffle;
+            //menuItem16.BusinessOwner = bobwaffle;
             menuItem16.FoodTruck = foodTruck6;
 
-            foodTruck1.BusinessOwner = jacobbelly;
-            foodTruck2.BusinessOwner = ismaildasman;
-            foodTruck3.BusinessOwner = john;
-            foodTruck4.BusinessOwner = bernie;
-            foodTruck5.BusinessOwner = gregskratch;
-            foodTruck6.BusinessOwner = bobwaffle;
+            //foodTruck1.BusinessOwner = jacobbelly;
+            //foodTruck2.BusinessOwner = ismaildasman;
+            //foodTruck3.BusinessOwner = john;
+            //foodTruck4.BusinessOwner = bernie;
+            //foodTruck5.BusinessOwner = gregskratch;
+            //foodTruck6.BusinessOwner = bobwaffle;
 
             context.SaveChanges();
         }

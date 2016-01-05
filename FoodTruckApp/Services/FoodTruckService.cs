@@ -24,10 +24,12 @@ namespace FoodTruckApp.Services {
                 Description = dbFoodTruck.Description,
                 Location = dbFoodTruck.Location,
                 Category = dbFoodTruck.Category,
-                BusinessOwner = new ApplicationUserDTO() {
-                    Id = dbFoodTruck.BusinessOwner.Id,
-                    UserName = dbFoodTruck.BusinessOwner.UserName
-                },
+                
+                //BusinessOwner = new ApplicationUserDTO() {
+                //    Id = dbFoodTruck.BusinessOwner.Id,
+                //    UserName = dbFoodTruck.BusinessOwner.UserName
+                //,}
+                
                 MenuItems = (from m in dbFoodTruck.MenuItems
                              select new MenuItemDTO() {
                                  Id = m.Id,

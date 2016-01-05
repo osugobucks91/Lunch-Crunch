@@ -7,13 +7,13 @@ namespace FoodTruckApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class noBusiness : IMigrationMetadata
+    public sealed partial class test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(noBusiness));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601041606505_noBusiness"; }
+            get { return "201601051657086_test"; }
         }
         
         string IMigrationMetadata.Source

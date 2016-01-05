@@ -12,7 +12,7 @@ namespace FoodTruckApp.Services {
         public decimal Price { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; } 
-        public ApplicationUserDTO BusinessOwner { get; set; }
+        //public ApplicationUserDTO BusinessOwner { get; set; }
         public FoodTruckDTO TruckID { get; set; }
     }
 }
