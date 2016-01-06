@@ -1,23 +1,62 @@
 ﻿<div class="row  text-center">
     <div class="col-md-4 col-md-offset-4">
         <div class="row">
-            <div class=" ">
+            <div class="">
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">
                         <li role="presentation"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
 
                         <li role="presentation"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
 
-                        <li role="presentation"  class="active"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
+                        <li role="presentation" class="active"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
                     </ul>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="panel panel-default">
 
+                        <div class="panel-heading text-left">
+
+                            <label>
+                                Popular food trucks
+                            </label>
+
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item" ng-repeat="review in ftc.foodTruck.reviews">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <div class="star-ratings-sprite"><span style="width:calc({{review.starRating}}/5*100%)" class="rating"></span></div>
+                                        </p>
+
+                                    </div>
+                                    <div class="col-md-12 text-left">
+                                        {{review.message}}
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <span class="" style="table-layout:fixed;display:table;width:100%">
+                            <a href="#/list" class="btn btn-default form-control" style="display:table-cell">
+                                Truck List
+                            </a>
+                            <a href="#/map" class="btn btn-default form-control" style="display:table-cell">
+                                Truck Map
+                            </a>
+                        </span>
+
+
+                    </div>
+
+                </div>
 
             </div>
 
+
         </div>
-
-
     </div>
-</div>

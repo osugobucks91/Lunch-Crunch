@@ -5,11 +5,11 @@
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">
 
-                        <li role="presentation"  class="active"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
+                        <li role="presentation" class="active"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
 
                         <li role="presentation"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
 
-                        <li role="presentation"><a href="#/reviews/{{ftc.food>Reviews}}">Reviews</a></li>
+                        <li role="presentation"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="col-md-12">
@@ -28,14 +28,24 @@
                     </h4>
                 </div>
                 <div class="col-md-12 text-left">
-                    <span>
+                    <p>
                         {{ftc.foodTruck.description}}
-                    </span>
+                    </p>
                 </div>
 
             </div>
 
         </div>
+
+        <span class="" style="table-layout:fixed;display:table;width:100%">
+            <a href="#/list" class="btn btn-default form-control" style="display:table-cell">
+                Truck List
+            </a>
+            <a href="#/map" class="btn btn-default form-control" style="display:table-cell">
+                Truck Map
+            </a>
+        </span>
+
 
 
     </div>

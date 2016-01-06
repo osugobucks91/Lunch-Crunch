@@ -7,13 +7,65 @@
                     <ul class="nav nav-tabs">
                         <li role="presentation"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
 
-                        <li role="presentation"  class="active"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
+                        <li role="presentation" class="active"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
 
                         <li role="presentation"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
                     </ul>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="panel panel-default">
 
+                        <div class="panel-heading">
+
+                            <label class="">
+                                Food Truck Menu
+                            </label>
+
+                        </div>
+                        <div class="list-group">
+                            <a href="#/menu/{{ftc.foodTruck.id}}" class="list-group-item" ng-repeat="menu in ftc.foodTruck.menuItems">
+                                <div class="row">
+                                    <div class="col-md-4 text-right">
+
+                                        <img class="img-responsive" ng-src="{{menu.imageUrl}}" />
+
+                                    </div>
+                                    <div class="col-md-8 text-left">
+                                        <div class="row">
+                                            <div class="col-md-8 text-left">
+                                                {{menu.name}}
+                                            </div>
+                                            <div class="col-md-4 text-left">
+                                                ${{menu.price|number:2}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="panel-body">{{menu.description}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <span class="" style="table-layout:fixed;display:table;width:100%">
+                            <a href="#/list" class="btn btn-default form-control" style="display:table-cell">
+                                Truck List
+                            </a>
+                            <a href="#/map" class="btn btn-default form-control" style="display:table-cell">
+                                Truck Map
+                            </a>
+                        </span>
+
+
+                    </div>
+
+
+
+                </div>
 
             </div>
 
