@@ -1,16 +1,13 @@
 ﻿
 
 .form-control {
- 
-       border-radius: 0;
-
+    border-radius: 0;
 }
 
 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    
 }
 
 
@@ -37,11 +34,13 @@ textarea {
     width: 110px;
     margin: 0 auto;
 }
-  .rating {
+
+.rating {
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
     background-position: 0 100%;
     float: left;
     height: 21px;
-    display:block;
-  }
-  
+    display: block;
+}
+
+.angular-google-map-container { height: 400px; }

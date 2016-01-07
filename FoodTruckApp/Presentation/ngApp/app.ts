@@ -1,5 +1,5 @@
 ﻿namespace FoodTruckApp {
-    angular.module("FoodTruckApp", ['ngRoute']);
+    angular.module("FoodTruckApp", ['ngRoute', 'uiGmapgoogle-maps']);
 
     angular.module("FoodTruckApp").factory('authInterceptor',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {
@@ -22,7 +22,7 @@
         });
 
     angular.module("FoodTruckApp")
-        .config(function ($routeProvider, $httpProvider) {
+        .config(function ($routeProvider, $httpProvider, uiGmapGoogleMapApiProvider) {
             $routeProvider
                 .when('/', {
                     templateUrl: '/presentation/ngApp/views/home.html',
@@ -75,5 +75,23 @@
                     controllerAs: 'ftc'
                 })
             $httpProvider.interceptors.push('authInterceptor');
+
+            //uiGmapGoogleMapApiProvider.configure({
+            //    key: 'AIzaSyCGwnT-mDmHVcmxNnT8QtiMrHpou0mimZw',
+            //    v: '3.20', //defaults to latest 3.X anyhow
+            //    libraries: 'weather,geometry,visualization'
+            //});
+
+            angular.module('FoodTruckApp', ['uiGmapgoogle-maps']).config((uiGmapGoogleMapApiProvider: any) => {
+                uiGmapGoogleMapApiProvider.configure({
+                    //    key: 'your api key',
+                });
+
+            });
+
         });
+
+
+
+
 }

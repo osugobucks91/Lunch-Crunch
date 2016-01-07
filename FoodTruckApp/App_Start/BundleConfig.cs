@@ -22,8 +22,11 @@ namespace FoodTruckApp {
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/Scripts/angular").Include(
+                "~/Scripts/lodash.js",
                 "~/Scripts/angular.js",
-                "~/Scripts/angular-route.js"));
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-simple-logger.js",
+                "~/Scripts/angular-google-maps.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/ngApp")
                 .Include("~/Presentation/ngApp/app.js")

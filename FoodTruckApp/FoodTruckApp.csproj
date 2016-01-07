@@ -55,8 +55,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -135,7 +135,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+      <HintPath>..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -201,6 +201,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Domain\Models\Favorite.cs" />
     <Compile Include="Domain\Models\FoodTruck.cs" />
     <Compile Include="Domain\Models\MenuItem.cs" />
     <Compile Include="Domain\Models\Review.cs" />
@@ -253,9 +254,14 @@
     <Content Include="Presentation\ngApp\views\map.html" />
     <Content Include="Presentation\ngApp\views\menu.html" />
     <Content Include="Presentation\ngApp\views\reviews.html" />
+    <Content Include="Scripts\angular-google-maps-street-view.js" />
+    <Content Include="Scripts\angular-google-maps-street-view.min.js" />
+    <Content Include="Scripts\angular-google-maps.js" />
+    <Content Include="Scripts\angular-google-maps.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-simple-logger.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -279,6 +285,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lodash.js" />
+    <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -312,6 +320,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckDescriptionController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\GoogleMapController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MenuController.ts" />
@@ -327,6 +336,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\google.geolocation\google.geolocation.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\google.geolocation\google.maps.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>

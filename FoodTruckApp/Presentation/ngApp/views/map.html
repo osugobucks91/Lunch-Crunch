@@ -11,13 +11,29 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-control">
-                    <input class="text-center" ng-model="customer.address" placeholder="Type Address" />
+                    <input class="text-center" ng-model="search" placeholder="Type Address" />
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <img class="img-responsive" src="http://www.sitesatlas.com/Flash/USCan/static/TXFH.gif" />
+            <div class="col-md-12" ng-controller="GoogleMapController as google">
+               
+                <ui-gmap-google-map center='google.center'
+                                    zoom='google.zoom'
+                                     
+                                    >
+                    <ui-gmap-markers models="google.markers"
+                                     coords="'self'"
+                                     click="'onClick'"
+
+                                     options="'options'">
+                        <ui-gmap-windows show="'show'" closeClick="closeClick()" class="mapWindow" click="'onClick'" events="markersEvents">
+                            <div ng-non-bindable>Test</div>
+                        </ui-gmap-windows>
+                    </ui-gmap-markers>
+                </ui-gmap-google-map>
+                
             </div>
+
             <div class="col-md-12">
 
                 <span class="" style="table-layout:fixed;display:table;width:100%">
@@ -29,7 +45,6 @@
                     </a>
                 </span>
 
-
             </div>
 
         </div>
@@ -37,4 +52,3 @@
 
 
 </div>
-
