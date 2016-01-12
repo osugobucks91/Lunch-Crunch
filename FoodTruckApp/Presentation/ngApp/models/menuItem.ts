@@ -2,11 +2,11 @@
 
     export class MenuItem {
 
-        public id: string;
+        public id: number;
         public name: string;
         public price: number;
         public description: string;
-        public image: string;      //should be optional
+        public imageUrl: string;
         public owner;
         public truckID: FoodTruck;
     }

@@ -7,12 +7,121 @@
     @Scripts.Render("~/Scripts/angular")
     @Scripts.Render("~/Scripts/ngApp")
 
+    <script src='//maps.googleapis.com/maps/api/js?libraries=places&sensor=false&language=en&v=3.17'></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/Content/style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function () {
+            size_li = $("#myList li").size();
+            x = 1;
+            $('#myList li:lt(' + x + ')').show();
+            $('#loadMore').click(function () {
+                x = (x + 1 <= size_li) ? x + 1 : size_li;
+                $('#myList li:lt(' + x + ')').show();
+            });
+            $('#showLess').click(function () {
+                x = (x - 1 < 0) ? 1 : x - 1;
+                $('#myList li').not(':lt(' + x + ')').hide();
+            });
+        });
+    </script>
+
 </head>
 <body>
 
-    <div class="container">
-        <ng-view></ng-view>
+    <div class="banner">
+        <div class="banner-info">
+            <div class="container" ng-controller="loginController as l">
+                <div class="logo">
+                    <a href="#/customer/login" class="btn btn-primary pull-right" ng-click="l.logout()" ng-show="l.isLoggedIn()">Logout</a>
+                    <div class="ribbon">
+                        <div class="ribbon-fold"><h1> <a href="#/">LunchCrunch</a></h1></div>
+                    </div>
+                    <h2>Your beat on the street for the best mobile eats</h2>
+                </div>
+                <div class="top-nav">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-center cl-effect-14">
+                                <li><a href="#/">Home</a></li>
+                                <li><a href="#/about">About</a></li>
+                                <li><a href="#/list">Trucks</a></li>
+                                <li><a href="#/map">Map</a></li>
+                                <li><a href="#/contact">Contact</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <ng-view></ng-view>
+
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-3 footer-left">
+                <h4>Address</h4>
+                <ul>
+                    <li>The Trap</li>
+                    <li>1 Hustle Hard Ave</li>
+                    <li>Houston, TX</li>
+                    <li>718-555-4123</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-left">
+                <h4>Popular</h4>
+                <ul>
+                    <li><a href="http://www.yelp.com">Yelp</a></li>
+                    <li><a href="http://www.postmates.com">Postmates</a></li>
+                    <li><a href="http://www.eat24.com">Eat24</a></li>
+                    <li><a href="http://www.grubhub.com">GrubHub</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-left">
+                <h4>Details</h4>
+                <ul>
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-right">
+                <p>
+                    © 2016 WeDaBest All rights reserved | Design by CodeBoiInc
+                    <div class="icons">
+                        <ul>
+                            <li><a href="http://www.twitter.com" class="twitter"> </a></li>
+                            <li><a href="http://www.facebook.com" class="twitter facebook"> </a></li>
+                            <li><a href="http://www.google.com" class="twitter chrome"> </a></li>
+                            <li><a href="http://www.pintrest.com" class="twitter pinterest"> </a></li>
+                            <li><a href="http://www.linkedin.com" class="twitter linkedin"> </a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/modernizr.custom.js"></script>
 
 </body>
 </html>

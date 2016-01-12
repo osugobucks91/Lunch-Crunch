@@ -14,9 +14,7 @@ namespace FoodTruckApp.Domain.Models {
 
         public string Description { get; set; }
 
-        public string ImageUrl { get; set; }                 //Optional Image Upload
-
-        //public ApplicationUser BusinessOwner { get; set; }
+        public string ImageUrl { get; set; }                 
         
         public FoodTruck FoodTruck { get; set; }
 

@@ -1,76 +1,39 @@
 ﻿
 <div class="row  text-center">
-    <div class="col-md-4 col-md-offset-4">
-        <div class="row">
-            <div class="">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs">
-                        <li role="presentation"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
 
-                        <li role="presentation" class="active"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
-
-                        <li role="presentation"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-
-                        <div class="panel-heading">
-
-                            <label class="">
-                                Food Truck Menu
-                            </label>
-
-                        </div>
-                        <div class="list-group">
-                            <a href="#/menu/{{ftc.foodTruck.id}}" class="list-group-item" ng-repeat="menu in ftc.foodTruck.menuItems">
-                                <div class="row">
-                                    <div class="col-md-4 text-right">
-
-                                        <img class="img-responsive" ng-src="{{menu.imageUrl}}" />
-
-                                    </div>
-                                    <div class="col-md-8 text-left">
-                                        <div class="row">
-                                            <div class="col-md-8 text-left">
-                                                {{menu.name}}
-                                            </div>
-                                            <div class="col-md-4 text-left">
-                                                ${{menu.price|number:2}}
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="panel-body">{{menu.description}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <span class="" style="table-layout:fixed;display:table;width:100%">
-                            <a href="#/list" class="btn btn-default form-control" style="display:table-cell">
-                                Truck List
-                            </a>
-                            <a href="#/map" class="btn btn-default form-control" style="display:table-cell">
-                                Truck Map
-                            </a>
-                        </span>
-
-
-                    </div>
-
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li><a href="#/description/{{menu.truck.id}}">Description</a></li>
+            <li class="active"><a href="#/menu/{{menu.truck.id}}">Menu</a></li>
+            <li><a href="#/reviews/{{menu.truck.id}}">Reviews</a></li>
+            <li class="pull-right"><a href="#/shoppingcart">Place Order &nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        </ul>
     </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" ng-repeat="m in menu.truck.menuItems">
+                    <div class="col-md-3" style="text-align:center">
+                        <img ng-src="{{m.imageUrl}}" class="img-circle" display="center" />
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <h2>{{m.name}}</h2><br>
+                        <p>{{m.description}}</p>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <br />
+                        <h3>{{m.price | currency}}</h3>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <h2>Add to cart</h2><br>
+                        <div ng-click="menu.addToCart(m.id)" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

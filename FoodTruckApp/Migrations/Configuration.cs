@@ -160,7 +160,7 @@
                     Id=1,
                     Name="Potato Taco",
                     Price = 4.0m,
-                    Description="tater tots, portabella-black bean salsa, piquillo peppers, salsa verde, feta, preserved lemon crema",
+                    Description="Tater tots, portabella-black bean salsa, piquillo peppers, salsa verde, feta, preserved lemon crema",
                     ImageUrl="http://www.recipe.com/images/taco-potato-skins-R100279-ss.jpg"
                 },
                 new MenuItem
@@ -243,7 +243,7 @@
                     Id=11,
                     Name="The principal",
                     Price = 9m,
-                    Description="classic burger with a choice of cheese, all homemade mayonnaise, mustard, ketchup, thin sliced onions, pickles, shredded lettuce, and slow roasted garlic tomatoes",
+                    Description="Classic burger with a choice of cheese, all homemade mayonnaise, mustard, ketchup, thin sliced onions, pickles, shredded lettuce, and slow roasted garlic tomatoes",
                     ImageUrl="http://www.nancyskitchen.com/frenchs-mustard-recipes/Frenchs_Classic_Burgers.jpg"
                 },
                 new MenuItem
@@ -251,7 +251,7 @@
                     Id=12,
                     Name="The cheerleader",
                     Price=10.25m,
-                    Description="pepper jack cheeseburger, crisp y jalapenos, slow roasted garlic tomatoes, shredded lettuce, and jalapeno ranch",
+                    Description="Pepper jack cheeseburger, crisp y jalapenos, slow roasted garlic tomatoes, shredded lettuce, and jalapeno ranch",
                     ImageUrl="http://www.burgerweekly.com/wp-content/uploads/2014/01/IMG_0776-300x300.jpg"
                 },
             //skratch
@@ -410,107 +410,28 @@
                 userManager.Create(patrick, "Password!1");
             }
 
-            ////-----food truck owners---------
-            //var business = userManager.FindByName("business@business.com");
-
-            //if (business == null)
-            //{
-            //    business = new ApplicationUser()
-            //    {
-            //        UserName = "business@business.com",
-            //        Email = "business@business.com",
-            //    };
-            //    userManager.Create(business, "Password!1");
-            //};
-
-            //var jacobbelly = userManager.FindByName("jacob.belly@gmail.com");
-            //if (jacobbelly == null)
-            //{
-            //    jacobbelly = new ApplicationUser()
-            //    {
-            //        UserName = "jacob.belly@gmail.com",
-            //        Email = "jacob.belly@gmail.com"
-            //    };
-            //    userManager.Create(jacobbelly, "Password!1");
-            //}
-
-            //var ismaildasman = userManager.FindByName("ismail.dasman@gmail.com");
-            //if (ismaildasman == null)
-            //{
-            //    ismaildasman = new ApplicationUser()
-            //    {
-            //        UserName = "ismail.dasman@gmail.com",
-            //        Email = "ismail.dasman@gmail.com"
-            //    };
-            //    userManager.Create(ismaildasman, "Password!1");
-            //}
-
-            //var john = userManager.FindByName("john.saint@gmail.com");
-            //if (john == null)
-            //{
-            //    john = new ApplicationUser()
-            //    {
-            //        UserName = "john.saint@gmail.com",
-            //        Email = "john.saint@gmail.com"
-            //    };
-            //    userManager.Create(john, "Password!1");
-            //}
-
-            //var bernie = userManager.FindByName("bernie.smith@gmail.com");
-            //if (bernie == null)
-            //{
-            //    bernie = new ApplicationUser()
-            //    {
-            //        UserName = "bernie.smith@gmail.com",
-            //        Email = "bernie.smith@gmail.com"
-            //    };
-            //    userManager.Create(bernie, "Password!1");
-            //}
-
-            //var gregskratch = userManager.FindByName("greg.skratch@gmail.com");
-            //if (gregskratch == null)
-            //{
-            //    gregskratch = new ApplicationUser()
-            //    {
-            //        UserName = "greg.skratch@gmail.com",
-            //        Email = "greg.skratch@gmail.com"
-            //    };
-            //    userManager.Create(gregskratch, "Password!1");
-            //}
-
-            //var bobwaffle = userManager.FindByName("bob.waffle@gmail.com");
-            //if (bobwaffle == null)
-            //{
-            //    bobwaffle = new ApplicationUser()
-            //    {
-            //        UserName = "bob.waffle@gmail.com",
-            //        Email = "bob.waffle@gmail.com"
-            //    };
-            //    userManager.Create(bobwaffle, "Password!1");
-            //}
-
             ReviewRepository reviewRepo = new ReviewRepository(context);
 
-            var review1 = reviewRepo.FindById(1, null);
-            var review2 = reviewRepo.FindById(2, null);
-            var review3 = reviewRepo.FindById(3, null);
-            var review4 = reviewRepo.FindById(4, null);
-            var review5 = reviewRepo.FindById(5, null);
-            var review6 = reviewRepo.FindById(6, null);
-            var review7 = reviewRepo.FindById(7, null);
-            var review8 = reviewRepo.FindById(8, null);
-            var review9 = reviewRepo.FindById(9, null);
-            var review10 = reviewRepo.FindById(10, null);
-            var review11 = reviewRepo.FindById(11, null);
-            var review12 = reviewRepo.FindById(12, null);
-            var review13 = reviewRepo.FindById(13, null);
-            var review14 = reviewRepo.FindById(14, null);
-            var review15 = reviewRepo.FindById(15, null);
-            var review16 = reviewRepo.FindById(16, null);
-            var review17 = reviewRepo.FindById(17, null);
-            var review18 = reviewRepo.FindById(18, null);
-            var review19 = reviewRepo.FindById(19, null);
-            var review20 = reviewRepo.FindById(20, null);
+            var review1 = reviewRepo.FindById(1);
+            var review2 = reviewRepo.FindById(2);
+            var review3 = reviewRepo.FindById(3);
+            var review4 = reviewRepo.FindById(4);
+            var review5 = reviewRepo.FindById(5);
+            var review6 = reviewRepo.FindById(6);
+            var review7 = reviewRepo.FindById(7);
+            var review8 = reviewRepo.FindById(8);
+            var review9 = reviewRepo.FindById(9);
+            var review10 = reviewRepo.FindById(10);
+            var review11 = reviewRepo.FindById(11);
+            var review12 = reviewRepo.FindById(12);
+            var review13 = reviewRepo.FindById(13);
+            var review14 = reviewRepo.FindById(14);
+            var review15 = reviewRepo.FindById(15);
+            var review16 = reviewRepo.FindById(16);
+            var review17 = reviewRepo.FindById(17);
+            var review18 = reviewRepo.FindById(18);
+            var review19 = reviewRepo.FindById(19);
+            var review20 = reviewRepo.FindById(20);
 
             MenuItemRepository menuItemRepo = new MenuItemRepository(context);
 
@@ -540,86 +461,43 @@
             var foodTruck5 = foodTruckRepo.FindById(5);
             var foodTruck6 = foodTruckRepo.FindById(6);
 
-            review1.CustomerUsername = daniel;
             review1.TruckId = foodTruck1;
-            review2.CustomerUsername = kara;
             review2.TruckId = foodTruck1;
-            review3.CustomerUsername = emma;
             review3.TruckId = foodTruck1;
-            review4.CustomerUsername = patrick;
             review4.TruckId = foodTruck2;
-            review5.CustomerUsername = kara;
             review5.TruckId = foodTruck2;
-            review6.CustomerUsername = emma;
             review6.TruckId = foodTruck2;
-            review7.CustomerUsername = patrick;
             review7.TruckId = foodTruck3;
-            review8.CustomerUsername = daniel;
             review8.TruckId = foodTruck3;
-            review9.CustomerUsername = patrick;
             review9.TruckId = foodTruck3;
-            review10.CustomerUsername = kara;
             review10.TruckId = foodTruck4;
-            review11.CustomerUsername = emma;
             review11.TruckId = foodTruck4;
-            review12.CustomerUsername = patrick;
             review12.TruckId = foodTruck4;
-            review13.CustomerUsername = daniel;
             review13.TruckId = foodTruck5;
-            review14.CustomerUsername = kara;
             review14.TruckId = foodTruck5;
-            review15.CustomerUsername = emma;
             review15.TruckId = foodTruck5;
-            review16.CustomerUsername = patrick;
             review16.TruckId = foodTruck5;
-            review17.CustomerUsername = test;
             review17.TruckId = foodTruck5;
-            review18.CustomerUsername = patrick;
             review18.TruckId = foodTruck6;
-            review19.CustomerUsername = emma;
             review19.TruckId = foodTruck6;
-            review20.CustomerUsername = kara;
             review20.TruckId = foodTruck6;
 
-            //menuItem1.BusinessOwner = jacobbelly;
             menuItem1.FoodTruck = foodTruck1;
-            //menuItem2.BusinessOwner = jacobbelly;
             menuItem2.FoodTruck = foodTruck1;
-            //menuItem3.BusinessOwner = jacobbelly;
             menuItem3.FoodTruck = foodTruck1;
-            //menuItem4.BusinessOwner = jacobbelly;
             menuItem4.FoodTruck = foodTruck1;
-            //menuItem5.BusinessOwner = ismaildasman;
             menuItem5.FoodTruck=foodTruck2;
-            //menuItem6.BusinessOwner = ismaildasman;
             menuItem6.FoodTruck = foodTruck2;
-            //menuItem7.BusinessOwner = john;
             menuItem7.FoodTruck=foodTruck3;
-            //menuItem8.BusinessOwner = john;
             menuItem8.FoodTruck = foodTruck3;
-            //menuItem9.BusinessOwner = john;
             menuItem9.FoodTruck = foodTruck3;
-            //menuItem10.BusinessOwner = john;
             menuItem10.FoodTruck = foodTruck3;
-            //menuItem11.BusinessOwner = bernie;
             menuItem11.FoodTruck = foodTruck4;
-            //menuItem12.BusinessOwner = bernie;
             menuItem12.FoodTruck = foodTruck4;
-            //menuItem13.BusinessOwner = gregskratch;
             menuItem13.FoodTruck = foodTruck5;
-            //menuItem14.BusinessOwner = gregskratch;
             menuItem14.FoodTruck = foodTruck5;
-            //menuItem15.BusinessOwner = bobwaffle;
             menuItem15.FoodTruck = foodTruck6;
-            //menuItem16.BusinessOwner = bobwaffle;
             menuItem16.FoodTruck = foodTruck6;
-
-            //foodTruck1.BusinessOwner = jacobbelly;
-            //foodTruck2.BusinessOwner = ismaildasman;
-            //foodTruck3.BusinessOwner = john;
-            //foodTruck4.BusinessOwner = bernie;
-            //foodTruck5.BusinessOwner = gregskratch;
-            //foodTruck6.BusinessOwner = bobwaffle;
 
             context.SaveChanges();
         }

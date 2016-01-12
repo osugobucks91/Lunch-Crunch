@@ -1,19 +1,146 @@
-﻿<div class="row  text-center">
-    <div class="col-md-4 col-md-offset-4">
-        <p>Welcome to Lunch Crunch!</p>
-
-        <p>
-            <label class="btn btn-default form-control" ng-click="home.goToBussinessLogin()">Businesses</label>
-        </p>
-        
-        <p>
-            <label class="btn btn-default form-control" ng-click="home.goToCustomerLogin()">Customers</label>
-        </p>
-        
-
+﻿<div class="banner-bottom">
+    <div class="container"  ng-controller="loginController as l">
+        <div class="banner-text" ng-show="!l.isLoggedIn()">
+            <h3>Love Food Trucks?</h3>
+            <p>Sign-Up Here!</p>
+            <a href="#/customer/register" class="btn btn-1 btn-1b">Register</a>
+            <p>Already a member? Login Here!</p>
+            <a href="#/customer/login" class="btn btn-1 btn-1b">Login</a>
+        </div>
+        <!--welcome-->
+        <div class="welcome">
+            <h3 class="title">Welcome</h3>
+            <p>The food truck experience is about to get even better.</p>
+            <div class="welcome-info">
+                <div class="col-md-6 welcome-grids">
+                    <div class="welcome-img">
+                        <img src="http://burgerbeast.com/wp-content/uploads/2014/06/GuinnessWorldFoodTruckRecord.jpg" class="img-responsive zoom-img" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-6 welcome-grids">
+                    <div class="welcome-img">
+                        <img src="http://dailylovestory.com/wp-content/uploads/2015/07/food-truck.jpg" class="img-responsive zoom-img" alt="" />
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <p>We help you find your food truck. Whether its a regular favorite or your wanted to try something new our services will allow you to find your next meal. </p>
+        </div>
+        <!--//welcome-->
     </div>
-
 </div>
-
-
-    
+<!--//banner-bottom-->
+<!--services-->
+<div class="services">
+    <div class="container">
+        <h3 class="title">Services</h3>
+        <div class="servc-grids">
+            <div class="col-md-3 servc-grid">
+                <div class="servc-icon hi-icon-effect-8">
+                    <a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                </div>
+                <h4>Tailored for you</h4>
+                <p>Personal profile attributes to better your food truck experience </p>
+            </div>
+            <div class="col-md-3 servc-grid">
+                <div class="servc-icon hi-icon-effect-8">
+                    <a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                </div>
+                <h4>Reviews</h4>
+                <p>Enjoy reviews before you try new food trucks </p>
+            </div>
+            <div class="col-md-3 servc-grid">
+                <div class="servc-icon hi-icon-effect-8">
+                    <a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-fire" aria-hidden="true"></span></a>
+                </div>
+                <h4>Specials</h4>
+                <p>Get the latest specials and updates from your favorite trucks</p>
+            </div>
+            <div class="col-md-3 servc-grid">
+                <div class="servc-icon hi-icon-effect-8">
+                    <a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"></span></a>
+                </div>
+                <h4>Favorites </h4>
+                <p>Store your favorite trucks for easy ordering </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//services-->
+<!-- testimonial -->
+<div class="testimonial">
+    <!-- container -->
+    <div class="container">
+        <h3 class="title">Feedback About us</h3>
+        <!-- banner-text Slider starts Here -->
+        <script src="~/Scripts/responsiveslides.min.js"></script>
+        <script>
+				// You can also use "$(window).load(function() {"
+					$(function () {
+					// Slideshow 4
+						$("#slider3").responsiveSlides({
+						auto: true,
+						pager:true,
+						nav:false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+        </script>
+        <!--//End-slider-script -->
+        <div id="top" class="callbacks_container">
+            <ul class="rslides" id="slider3">
+                <li>
+                    <div class="testimonial-grids">
+                        <div class="testimonial-left">
+                            <img src="https://pbs.twimg.com/profile_images/378800000785395473/6539ec181b661ad2a2d76400eb2f40ef.png" alt="" />
+                        </div>
+                        <div class="testimonial-right">
+                            <h5>Mr. Derp</h5>
+                            <p>
+                                <span>"</span>This app has opened my eyes to a world of DANK food trucks that I previously didn't know exist<span>"</span>
+                            </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="testimonial-grids">
+                        <div class="testimonial-left">
+                            <img src="http://i784.photobucket.com/albums/yy124/jonco74/rectangle_zps2c461edb.jpg" alt="" />
+                        </div>
+                        <div class="testimonial-right">
+                            <h5>Trey Anastasio</h5>
+                            <p>
+                                <span>"</span>From using this app I found some Phish tacos that were face melting!<span>"</span>
+                            </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="testimonial-grids">
+                        <div class="testimonial-left">
+                            <img src="http://images.enstarz.com/data/images/full/14909/hannah-davis.jpg?w=580" alt="" />
+                        </div>
+                        <div class="testimonial-right">
+                            <h5>Hannah Davis</h5>
+                            <p>
+                                <span>"</span>This is such a great concept! The creators of this app are complete studs too ;-)<span>"</span>
+                            </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //container -->
+</div>

@@ -19,6 +19,17 @@
                         truck.rating = truck.reviews.reduce(function (prev, curr) { return prev + curr.starRating }, 0) / truck.reviews.length;
                     }
                 })
+                .then(() =>
+                {
+                    this.foodTrucks[0].image = "../Content/bellyup.png";
+                    this.foodTrucks[1].image = "../Content/dasman.png";
+                    this.foodTrucks[2].image = "../Content/stjohnsfire.png";
+                    this.foodTrucks[3].image = "../Content/berniesbus.png";
+                    this.foodTrucks[4].image = "../Content/skratch.png";
+                    this.foodTrucks[5].image = "../Content/wafflebus.png";
+
+                })
+
         }
 
         public goToMap()

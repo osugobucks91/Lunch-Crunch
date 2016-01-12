@@ -11,8 +11,6 @@ namespace FoodTruckApp.Domain.Models {
 
         public int StarRating { get; set; }
 
-        public ApplicationUser CustomerUsername { get; set; }
-
         public string Message { get; set; }
 
         public FoodTruck TruckId { get; set; }

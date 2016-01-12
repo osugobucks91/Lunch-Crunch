@@ -50,13 +50,25 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -144,20 +156,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -201,17 +204,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Domain\Models\Favorite.cs" />
     <Compile Include="Domain\Models\FoodTruck.cs" />
     <Compile Include="Domain\Models\MenuItem.cs" />
     <Compile Include="Domain\Models\Review.cs" />
+    <Compile Include="Domain\Models\ShoppingCart.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\Repository\FoodTruckRepository.cs" />
     <Compile Include="Infrastructure\Repository\MenuItemRepository.cs" />
     <Compile Include="Infrastructure\Repository\ReviewRepository.cs" />
+    <Compile Include="Infrastructure\Repository\ShoppingCartRepository.cs" />
     <Compile Include="Migrations\201601051657086_test.cs" />
     <Compile Include="Migrations\201601051657086_test.Designer.cs">
       <DependentUpon>201601051657086_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601101856544_initial.cs" />
+    <Compile Include="Migrations\201601101856544_initial.Designer.cs">
+      <DependentUpon>201601101856544_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\FoodTrucksController.cs" />
@@ -220,6 +228,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presentation\Controllers\ReviewsController.cs" />
+    <Compile Include="Presentation\Controllers\ShoppingCartController.cs" />
     <Compile Include="Presentation\Models\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\AccountViewModels.cs" />
     <Compile Include="Infrastructure\Repository\GenericRepository.cs" />
@@ -229,10 +239,13 @@
     <Compile Include="Domain\Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Results\ChallengeResult.cs" />
     <Compile Include="Services\ApplicationUserDTO.cs" />
+    <Compile Include="Services\ReviewService.cs" />
     <Compile Include="Services\FoodTruckDTO.cs" />
     <Compile Include="Services\FoodTruckService.cs" />
     <Compile Include="Services\MenuItemDTO.cs" />
     <Compile Include="Services\ReviewDTO.cs" />
+    <Compile Include="Services\ShoppingCartDTO.cs" />
+    <Compile Include="Services\ShoppingCartService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -240,12 +253,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\star-off.svg" />
+    <Content Include="Content\star-on.svg" />
     <Content Include="Content\star-rating-sprite.png" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Presentation\ngApp\views\businessLogin.html" />
-    <Content Include="Presentation\ngApp\views\businessRegister.html" />
+    <Content Include="images\contactMaps.jpg" />
+    <Content Include="images\dott.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="Presentation\ngApp\views\about.html" />
+    <Content Include="Presentation\ngApp\views\contact.html" />
     <Content Include="Presentation\ngApp\views\customerLogin.html" />
     <Content Include="Presentation\ngApp\views\customerRegister.html" />
     <Content Include="Presentation\ngApp\views\description.html" />
@@ -253,7 +273,10 @@
     <Content Include="Presentation\ngApp\views\list.html" />
     <Content Include="Presentation\ngApp\views\map.html" />
     <Content Include="Presentation\ngApp\views\menu.html" />
+    <Content Include="Presentation\ngApp\views\orderComplete.html" />
+    <Content Include="Presentation\ngApp\views\payment.html" />
     <Content Include="Presentation\ngApp\views\reviews.html" />
+    <Content Include="Presentation\ngApp\views\shoppingCart.html" />
     <Content Include="Scripts\angular-google-maps-street-view.js" />
     <Content Include="Scripts\angular-google-maps-street-view.min.js" />
     <Content Include="Scripts\angular-google-maps.js" />
@@ -277,21 +300,26 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lightbox-plus-jquery.min.js" />
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\modernizr.custom.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\responsiveslides.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -314,28 +342,28 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\BusinessLoginController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\businessRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\CustomerLoginController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\customerRegisterController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckDescriptionController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\FoodTruckListController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\GoogleMapController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\foodTruckMenuController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\MapController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\MenuController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ReviewsController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\shoppingCartController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\ApplicationUser.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\FoodTruck.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\review.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\models\menuItem.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\models\shoppingCart.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\es6-promise\es6-promise.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\google.geolocation\google.geolocation.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\google.geolocation\google.maps.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
@@ -346,6 +374,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601051657086_test.resx">
       <DependentUpon>201601051657086_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601101856544_initial.resx">
+      <DependentUpon>201601101856544_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

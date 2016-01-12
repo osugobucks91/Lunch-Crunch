@@ -22,14 +22,7 @@ namespace FoodTruckApp.Services {
                 Name = dbFoodTruck.Name,
                 Image = dbFoodTruck.Image,
                 Description = dbFoodTruck.Description,
-                Location = dbFoodTruck.Location,
-                Category = dbFoodTruck.Category,
-                
-                //BusinessOwner = new ApplicationUserDTO() {
-                //    Id = dbFoodTruck.BusinessOwner.Id,
-                //    UserName = dbFoodTruck.BusinessOwner.UserName
-                //,}
-                
+                Location = dbFoodTruck.Location,               
                 MenuItems = (from m in dbFoodTruck.MenuItems
                              select new MenuItemDTO() {
                                  Id = m.Id,
@@ -45,22 +38,6 @@ namespace FoodTruckApp.Services {
                                Message = r.Message
                            }).ToList()
             } : null;
-        }
-
-        private FoodTruck Map(FoodTruckDTO dtoFoodTruck) {
-            return dtoFoodTruck != null ? new FoodTruck() {
-                Id = dtoFoodTruck.Id,
-                Name = dtoFoodTruck.Name,
-                Image = dtoFoodTruck.Image,
-                Description = dtoFoodTruck.Description
-            } : null;
-        }
-
-        //Add a new food truck
-        [HttpPost]
-        public void AddNewFoodTruck(FoodTruckDTO newFoodTruck) {
-            _repo.Add(Map(newFoodTruck));
-            _repo.SaveChanges();
         }
 
         //Get a list of food trucks for list view

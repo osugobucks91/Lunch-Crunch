@@ -15,11 +15,8 @@ namespace FoodTruckApp.Domain.Models {
             return userIdentity;
         }
 
-        //public IList<FoodTruck> FoodTrucks { get; set; }
-
-        //public IList<MenuItem> MenuItems { get; set; }
-
-        public IList<Review> Reviews { get; set; }
+        public IList<ShoppingCart> ShoppingCarts { get; set; }
+        
 
     }
 }

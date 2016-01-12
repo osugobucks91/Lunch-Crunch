@@ -1,62 +1,62 @@
 ﻿<div class="row  text-center">
-    <div class="col-md-4 col-md-offset-4">
-        <div class="row">
-            <div class="">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs">
-                        <li role="presentation"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
 
-                        <li role="presentation"><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li><a href="#/description/{{review.foodTruck.id}}">Description</a></li>
+            <li><a href="#/menu/{{review.foodTruck.id}}">Menu</a></li>
+            <li class="active"><a href="#/reviews/{{review.foodTruck.id}}">Reviews</a></li>
+            <li class="pull-right"><a ng-click="addReview=true" class="btn btn-default pull-right" style="border-radius:0"><span class="glyphicon glyphicon-plus"></span></a></li>
+        </ul>
+    </div>
 
-                        <li role="presentation" class="active"><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-
-                        <div class="panel-heading text-left">
-
-                            <label>
-                                Popular food trucks
-                            </label>
-
-                        </div>
-                        <div class="list-group">
-                            <a href="" class="list-group-item" ng-repeat="review in ftc.foodTruck.reviews">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            <div class="star-ratings-sprite"><span style="width:calc({{review.starRating}}/5*100%)" class="rating"></span></div>
-                                        </p>
-
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        {{review.message}}
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <span class="" style="table-layout:fixed;display:table;width:100%">
-                            <a href="#/list" class="btn btn-default form-control" style="display:table-cell">
-                                Truck List
-                            </a>
-                            <a href="#/map" class="btn btn-default form-control" style="display:table-cell">
-                                Truck Map
-                            </a>
-                        </span>
-
-
-                    </div>
-
-                </div>
+    <div ng-show="addReview">
+        <form ng-submit="review.addReview(review.foodTruck.id)">
+            <div class="form-group">
+                <label>
+                    Add a review
+                </label>
+            </div>
+            <div class="form-group">
+                <span class="form-control" style="table-layout:fixed;display:table;width:100%">
+                    <textarea ng-model="review.newReview.message" class="form-control" placeholder="Write your review here.." style="display:table-cell">...</textarea>
+                </span>
+            </div>
+            <div class="form-group">
+                <span class="starRating">
+                    <input ng-model="review.newReview.starRating" id="rating5" type="radio" name="rating" value="5">
+                    <label for="rating5">5</label>
+                    <input ng-model="review.newReview.starRating" id="rating4" type="radio" name="rating" value="4">
+                    <label for="rating4">4</label>
+                    <input ng-model="review.newReview.starRating" id="rating3" type="radio" name="rating" value="3">
+                    <label for="rating3">3</label>
+                    <input ng-model="review.newReview.starRating" id="rating2" type="radio" name="rating" value="2">
+                    <label for="rating2">2</label>
+                    <input ng-model="review.newReview.starRating" id="rating1" type="radio" name="rating" value="1">
+                    <label for="rating1">1</label>
+                </span>
+            </div>
+            <div class="form-group">
+                <span class="" style="table-layout:fixed;display:table;width:100%">
+                    <input class="form-control" type="submit" value="Submit" style="display:table-cell" />
+                </span>
 
             </div>
+        </form>
+    </div>
 
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6" ng-repeat="r in review.foodTruck.reviews">
+                <div class="col-md-3" style="text-align:center">
+                    <div class="star-ratings-sprite">
+                        <span style="width:calc({{r.starRating}}/5*100%)" class="rating"></span>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <p>{{r.message}}</p>
+                </div>
+            </div>
         </div>
     </div>
+
+</div>

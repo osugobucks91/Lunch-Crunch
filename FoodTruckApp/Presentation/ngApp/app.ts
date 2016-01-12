@@ -25,9 +25,13 @@
         .config(function ($routeProvider, $httpProvider, uiGmapGoogleMapApiProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: '/presentation/ngApp/views/home.html',
-                    controller: FoodTruckApp.Controllers.HomeController,
-                    controllerAs: 'home'
+                    templateUrl: '/presentation/ngApp/views/home.html'
+                })
+                .when('/about', {
+                    templateUrl: '/presentation/ngApp/views/about.html',
+                })
+                .when('/contact', {
+                    templateUrl: '/presentation/ngApp/views/contact.html'
                 })
                 .when('/customer/login', {
                     templateUrl: '/presentation/ngApp/views/customerLogin.html',
@@ -38,16 +42,6 @@
                     templateUrl: '/presentation/ngApp/views/customerRegister.html',
                     controller: FoodTruckApp.Controllers.CustomerRegisterController,
                     controllerAs: 'custRegister'
-                })
-                .when('/business/login', {
-                    templateUrl: '/presentation/ngApp/views/businessLogin.html',
-                    controller: FoodTruckApp.Controllers.BusinessLoginController,
-                    controllerAs: 'businessLogin'
-                })
-                .when('/business/register', {
-                    templateUrl: '/presentation/ngApp/views/businessRegister.html',
-                    controller: FoodTruckApp.Controllers.BusinessRegisterController,
-                    controllerAs: 'businessRegister'
                 })
                 .when('/map', {
                     templateUrl: '/presentation/ngApp/views/map.html',
@@ -66,25 +60,34 @@
                 })
                 .when('/menu/:id', {
                     templateUrl: '/presentation/ngApp/views/menu.html',
-                    controller: FoodTruckApp.Controllers.FoodTruckDescriptionController,
-                    controllerAs: 'ftc'
+                    controller: FoodTruckApp.Controllers.FoodTruckMenuController,
+                    controllerAs: 'menu'
                 })
                 .when('/reviews/:id', {
                     templateUrl: '/presentation/ngApp/views/reviews.html',
-                    controller: FoodTruckApp.Controllers.FoodTruckDescriptionController,
-                    controllerAs: 'ftc'
+                    controller: FoodTruckApp.Controllers.ReviewsController,
+                    controllerAs: 'review'
                 })
+                .when('/shoppingcart', {
+                    templateUrl: '/presentation/ngApp/views/shoppingCart.html',
+                    controller: FoodTruckApp.Controllers.ShoppingCartController,
+                    controllerAs: 'cart'
+                })
+                .when('/payment', {
+                    templateUrl: '/presentation/ngApp/views/payment.html'
+                })
+                .when('/ordercomplete', {
+                    templateUrl: '/presentation/ngApp/views/orderComplete.html'
+                })
+
             $httpProvider.interceptors.push('authInterceptor');
 
-            //uiGmapGoogleMapApiProvider.configure({
-            //    key: 'AIzaSyCGwnT-mDmHVcmxNnT8QtiMrHpou0mimZw',
-            //    v: '3.20', //defaults to latest 3.X anyhow
-            //    libraries: 'weather,geometry,visualization'
-            //});
 
             angular.module('FoodTruckApp', ['uiGmapgoogle-maps']).config((uiGmapGoogleMapApiProvider: any) => {
                 uiGmapGoogleMapApiProvider.configure({
                     //    key: 'your api key',
+                    v: '3.20', //defaults to latest 3.X anyhow
+                    libraries: 'places' // Required for SearchBox
                 });
 
             });

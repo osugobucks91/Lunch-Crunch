@@ -24,6 +24,15 @@
                 });
         }
 
+        public logout() {
+            this.$window.localStorage.removeItem('token');
+            this.$location.path('/customer/login');
+        }
+
+        public isLoggedIn() {
+            return this.$window.localStorage.getItem('token');
+        }
+
         public goToRegister() {
             this.$location.path('/customer/register');
         }

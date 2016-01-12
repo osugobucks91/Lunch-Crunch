@@ -9,29 +9,59 @@
             </h3>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-control">
-                    <input class="text-center" ng-model="search" placeholder="Type Address" />
-                </div>
+            <!--template for search box-->
+            <div class="col-md-12" id="searchBoxParent">
+                <script type="text/ng-template" id="searchBox.template.html">
+                    <div class="col-md-12">
+                        <div class="form-control">
+                            <input class="text-center" type="text" ng-model="title" placeholder="Search Address" required />
+                        </div>
+                    </div>
+                </script>
             </div>
 
-            <div class="col-md-12" ng-controller="GoogleMapController as google">
-               
-                <ui-gmap-google-map center='google.center'
-                                    zoom='google.zoom'
-                                     
-                                    >
-                    <ui-gmap-markers models="google.markers"
-                                     coords="'self'"
-                                     click="'onClick'"
+            <div class="col-md-12" >
 
+                <ui-gmap-google-map center="map.center"
+                                    zoom="map.zoom"
+                                    control="map.control">
+                    <ui-gmap-search-box template="map.searchBox.template"
+                                        events="map.searchBoxEvents"
+                                        parentdiv="map.searchBox.parentdiv">
+                    </ui-gmap-search-box>
+                    <ui-gmap-markers models="map.markers"
+                                     idkey="'id'"
+                                     events="map.markersEvents"
+                                     coords="'self'"
+                                     click="onClick"
+                                     title="'title'"
                                      options="'options'">
-                        <ui-gmap-windows show="'show'" closeClick="closeClick()" class="mapWindow" click="'onClick'" events="markersEvents">
-                            <div ng-non-bindable>Test</div>
+                        <ui-gmap-windows show="map.window.show"
+                                         coords="map.window.model"
+                                         closeClick="map.window.model.closeClick"
+                                         class="mapWindow"
+                                         click="onClick"
+                                         options="map.window.options"
+                                         ng-cloak>
+                            <div ng-non-bindable>
+                                <p>
+                                    <a href="{{options.href}}" target="_blank">
+                                        <img style="max-height:50px;width:auto" src="{{options.image}}" />
+                                    </a>
+
+                                </p>
+                                <p>
+                                    <label>
+                                        {{options.title}}
+                                    </label>
+                                </p>
+                            </div>
+
                         </ui-gmap-windows>
                     </ui-gmap-markers>
+
                 </ui-gmap-google-map>
-                
+
             </div>
 
             <div class="col-md-12">

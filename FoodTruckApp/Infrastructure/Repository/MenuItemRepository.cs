@@ -10,22 +10,17 @@ namespace FoodTruckApp.Infrastructure.Repository
 {
     public class MenuItemRepository : GenericRepository<MenuItem>
     {
-        public MenuItemRepository(ApplicationDbContext db) : base(db) { }
+        public MenuItemRepository(DbContext db) : base(db) { }
 
         protected override IQueryable<MenuItem> Include(IQueryable<MenuItem> query)
         {
-            return query
-                //.Include(m => m.BusinessOwner)
-                        .Include(m => m.FoodTruck);
+            return query.Include(m => m.FoodTruck);
         }
 
-        public MenuItem FindById(int id
-            //, string username
-            )
+        public MenuItem FindById(int id)
         {
             return (from m in Table
                     where m.Id == id 
-                    //&& m.BusinessOwner.UserName == username
                     select m).FirstOrDefault();
         }
 

@@ -15,6 +15,6 @@ namespace FoodTruckApp.Services {
 
         public string Password { get; set; }
 
-        public IList<ReviewDTO> Reviews { get; set; }
+        public IList<ShoppingCartDTO> cartItem { get; set; }
     }
 }

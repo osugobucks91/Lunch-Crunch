@@ -19,10 +19,6 @@ namespace FoodTruckApp.Domain.Models {
         public string Location { get; set; }
 
         public IList<Review> Reviews { get; set; }
-
-        //public ApplicationUser BusinessOwner { get; set; }
-
-        public string Category { get; set; } //Can be favorite, popular, etc.
     }
 }
 

@@ -1,0 +1,46 @@
+﻿<div class="row  text-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="my-container">
+                    <img class="img-responsive center-block" src="http://cdn3.vox-cdn.com/uploads/chorus_asset/file/866114/Msivin_TruckYard4.0.jpg">
+                </div>
+                <hr>
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 align="center">Shopping Cart</h1>
+                    <br>
+                    <br>
+                    <hr>
+                    <div class="row" ng-repeat="c in cart.cartItems">
+                        <div class="col-md-3">
+                            <img alt="" style="height:100px; width:100px;" class="thumbnail" ng-src="{{c.item.imageUrl}}" />
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-muted text-left">
+                                {{c.item.name}}
+                            </h4>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-muted text-left">
+                                {{c.item.price | currency}}
+                            </h4>
+                        </div>
+                        <div class="col-md-3">
+                            <div ng-click="cart.deleteShoppingCartItem(c.id)" class="btn btn-danger active" type="button">X</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-4">
+                            <a href="#/payment" class="btn btn-success">Checkout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

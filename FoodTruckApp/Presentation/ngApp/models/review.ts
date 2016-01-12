@@ -12,6 +12,6 @@
 
         public Owner;
 
-        public truckId: FoodTruck;
+        public truckId: number;
     }
 }

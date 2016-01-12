@@ -22,5 +22,6 @@ namespace FoodTruckApp.Infrastructure {
 
         public IDbSet<Review> Reviews { get; set; }
 
+        public IDbSet<ShoppingCart> ShoppingCarts { get; set; }
     }
 }
